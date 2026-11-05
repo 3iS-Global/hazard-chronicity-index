@@ -1,0 +1,40 @@
+# Publish only the self-contained dashboard (index.html) to GitHub Pages.
+# The default "deploy from branch" packs the whole repository (~130 MB: data, maps, atlas),
+# which can make the deploy step time out. This workflow uploads just the page.
+name: Deploy dashboard to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths: [index.html, .github/workflows/pages.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      # Copy only the dashboard into a clean folder
+      - name: Prepare site folder
+        run: |
+          mkdir site
+          cp index.html site/index.html
+          touch site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
