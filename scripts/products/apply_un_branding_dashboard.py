@@ -37,7 +37,7 @@ hdr=f'''<header>
     <div class="logos"><img class="un" src="{UN}" alt="Naciones Unidas"></div>
     <div class="titles">
       <h1>Índices de cronicidad de amenazas asociadas a El Niño — Ecuador, 2015–2025</h1>
-      <p>Índice de Cronicidad de Amenazas (HCI): inundación, aluvión, deslizamiento, socavamiento y combinado</p>
+      <p>Índice de Cronicidad de Amenazas (HCI) · Inundación (EFCI) · Aluvión (EACI) · Deslizamiento (ELCI) · Socavamiento (ESCI) · Combinado (EHCI)</p>
     </div>
     <div class="header-right"><button id="btnInfo" onclick="document.getElementById('modalOverlay').classList.add('open')" title="Metodología">ⓘ Acerca de</button>
     <img class="eu" src="{EU}" alt="Financiado por la Unión Europea — Ayuda Humanitaria"></div>

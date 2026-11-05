@@ -40,6 +40,7 @@ RAMP=['#E3EDF6','#99CCEA','#009EDB','#0067A3','#002E6E']
 # Diverging palette for Gi* hotspots: UN red = hot, UN blue = cold
 HOT=['#9B1235','#ED1847','#F59AAE','#EDEFF2','#99CCEA','#0074B7','#002E6E']
 # Hazard views: key -> (slug, label)
+ACR={'TODOS':'EHCI','flood':'EFCI','debris_flow':'EACI','landslide':'ELCI','scour':'ESCI'}  # per-hazard index acronyms
 HAZ={'TODOS':('combinado','amenazas combinadas'),'flood':('inundaciones','inundaciones'),'debris_flow':('aluviones','aluviones'),'landslide':('deslizamientos','deslizamientos'),'scour':('socavamientos','socavamientos')}
 # Indicators: key -> (number, slug, title, unit)
 IND={ # key:(num, slug, title, unit)
@@ -62,7 +63,7 @@ def fv(v,f):
 UN=Image.open(R+'assets/branding/un_emblem_blue.png').convert('RGBA'); EU=Image.open(R+'assets/branding/eu_funded_ha_es_1200.png').convert('RGBA'); IS=Image.open(R+'assets/branding/3is_logo_color.png').convert('RGBA')
 # Draw one map and save it as PNG
 def draw(ind,hz,out):
-    num,slug,title,unit=IND[ind]; meta=D['indicadores_meta'][ind][hz]; layer=D['hazards'][hz][ind]
+    num,slug,title,unit=IND[ind]; title=f'Cronicidad ({ACR[hz]})' if ind=='hci' else title; meta=D['indicadores_meta'][ind][hz]; layer=D['hazards'][hz][ind]
     cols=HOT if ind=='hotspots' else RAMP[:len(meta['colors'])]
     if meta.get('categorical'): labels=meta['labels']
     else:

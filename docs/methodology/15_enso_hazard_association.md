@@ -209,8 +209,8 @@ cambiar la fórmula):
    socavamiento; no lo es, con estos datos, para la Sierra ni el Oriente.
    Acción mínima: una **etiqueta de "señal ENSO regional"** (fuerte / débil /
    no detectable) por cantón en el dashboard y los perfiles.
-2. **Aluvión (HCI).** La asociación es inversa (IRR 0.46): hay menos
-   aluviones por mes durante El Niño. El HCI debe presentarse como
+2. **Aluvión (EACI).** La asociación es inversa (IRR 0.46): hay menos
+   aluviones por mes durante El Niño. El EACI debe presentarse como
    cronicidad del peligro, no como cronicidad *asociada a ENSO*.
 3. **Componente Magnitud ENSO (15 %).** Sin gradiente por magnitud a escala
    nacional y con ese componente ya identificado como el más influyente en
