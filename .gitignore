@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+# Credentials and secrets: never version them / Credenciales y secretos: nunca versionar
+.cdsapirc
+*.env
+.env
+credentials*.json
+service_account*.json
+# Heavy or restricted data (see config/data_sources.yaml) / Datos pesados o con restricciones de uso
+data/raw/
+data/external/
+data/processed/admin_boundaries.gpkg
+data/processed/hazard_event*
+*.zip
+models/*.joblib
+logs/
+~$*
+.DS_Store
+Thumbs.db

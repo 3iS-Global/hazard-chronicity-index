@@ -1,0 +1,24 @@
+# Python dependencies of the Hazard Chronicity Index pipeline.
+# Each comment says which pipeline step needs the package.
+pandas>=2.2
+numpy>=1.26
+pyyaml>=6.0
+pyarrow>=15.0
+openpyxl>=3.1
+jupyter>=1.0
+geopandas>=0.14      # Step 2 — spatial integration
+pyogrio>=0.7         # Step 2 — GeoPackage read/write
+pymannkendall>=1.4   # Step 3 — trend test
+jenkspy>=0.4          # Step 8 — natural-breaks (Jenks) classification
+libpysal>=4.9          # Step 9 — spatial weights matrices (Queen, KNN)
+esda>=2.5               # Step 9 — Getis-Ord Gi*, Local Moran's I
+h3>=4.0                 # Step 9 — hexagonal aggregation
+scikit-learn>=1.4       # Step 9 — numerical utilities (fallback KDE)
+mapclassify>=2.6         # Step 10 — Jenks classification for maps (static and interactive)
+folium>=0.16             # Step 10 — interactive maps (Leaflet)
+plotly>=5.20              # Step 10 — HTML dashboard charts
+ipywidgets>=8.1            # Step 10 — interactive dashboard inside Jupyter
+joblib>=1.3               # Step 12 — serialisation of trained models
+
+statsmodels>=0.14       # Step 15 — Negative Binomial regression, HAC errors, diagnostics
+pytest>=8                # Step 15 — unit tests (tests/)
