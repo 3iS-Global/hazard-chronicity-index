@@ -1,11 +1,11 @@
 # 10 — Los productos finales (resumen ejecutivo)
 
-**Fase 10 de 10 del proyecto EFCI Ecuador — completada el 6 de agosto de 2026**
+**Fase 10 de 10 del proyecto HCI Ecuador — completada el 6 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
 
-Las nueve fases anteriores construyeron el índice EFCI y todo su
+Las nueve fases anteriores construyeron el índice HCI y todo su
 análisis, pero vivían dentro de notebooks técnicos — útiles para
 quien programa, no para quien necesita mirar un mapa o revisar el
 perfil de un cantón en una reunión. Esta fase convierte todo ese
@@ -20,7 +20,7 @@ ejecutivo.
    el navegador, con zoom y detalle por cantón al pasar el cursor) —
    frecuencia de inundaciones, severidad, frecuencia en meses El Niño,
    población afectada, pérdidas agrícolas, pérdidas de vivienda,
-   cronicidad EFCI, y hotspots.
+   cronicidad HCI, y hotspots.
 
 2. **Un workbook de Excel** con los rankings de cantones y provincias,
    tendencias mensuales y anuales, y un análisis por categoría de El
@@ -33,7 +33,7 @@ ejecutivo.
    para quien quiera seguir ajustándolo con código.
 
 4. **Perfiles individuales de las 24 provincias y los 221 cantones**
-   (246 páginas en total) — cada uno con su puntaje EFCI, sus 4
+   (246 páginas en total) — cada uno con su puntaje HCI, sus 4
    componentes, su posición en el ranking nacional, y sus principales
    indicadores de impacto histórico.
 
@@ -71,7 +71,7 @@ referencia, en vez de dejar fuera a la mayoría del país.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-Con esta fase, el proyecto EFCI Ecuador entrega su primer ciclo
+Con esta fase, el proyecto HCI Ecuador entrega su primer ciclo
 completo: de una base de datos cruda de 69,718 reportes de desastre a
 un conjunto de productos listos para apoyar decisiones de Acción
 Anticipatoria — mapas para visualizar, un tablero para explorar,
@@ -99,18 +99,18 @@ El equipo pidió los indicadores y la susceptibilidad en tablas listas
 para compartir, sin tener que entrar a los notebooks. Se entregaron 2
 archivos Excel nuevos en `outputs/tables/`:
 
-**`EFCI_Ecuador_Tabla_Master_Indicadores.xlsx`** — los 4 sub-índices y
-el EFCI de los 221 cantones, en 5 hojas (Combinado, Inundación,
+**`HCI_Ecuador_Tabla_Master_Indicadores.xlsx`** — los 4 sub-índices y
+el HCI de los 221 cantones, en 5 hojas (Combinado, Inundación,
 Aluvión, Deslizamiento, Socavamiento), cada una ordenada de mayor a
 menor cronicidad, con su clase y su resultado de hotspot (Gi*). La
 hoja Combinado incluye además los totales históricos por sector
 (Población, Vivienda, Agricultura, Educación, Salud).
 
-**`EFCI_Ecuador_Tabla_Master_Susceptibilidad.xlsx`** — cada centro de
+**`HCI_Ecuador_Tabla_Master_Susceptibilidad.xlsx`** — cada centro de
 salud (2,094), centro educativo (15,665) y centro poblado (1,340) del
 país, con su clasificación en las 3 capas oficiales de susceptibilidad
 (Inundación / Movimientos en Masa / Deslizamientos) del geoproceso de
-ArcGIS Pro — no el historial de desastres del EFCI. Incluye una hoja
+ArcGIS Pro — no el historial de desastres del HCI. Incluye una hoja
 de resumen con los totales agregados. Dos limitaciones de origen
 quedan documentadas en la propia hoja Léame del archivo: la tabla de
 centros educativos no trae coordenadas utilizables, y la de centros
@@ -119,7 +119,7 @@ el geoproceso original).
 
 ## ¿Qué falta?
 
-- Validación externa del EFCI contra fuentes internacionales de
+- Validación externa del HCI contra fuentes internacionales de
   desastres (UNOSAT, EM-DAT, DesInventar, Copernicus EMS) antes de
   considerarlo apto para uso operativo pleno.
 - El componente predictivo (modelos que estimen el impacto esperado

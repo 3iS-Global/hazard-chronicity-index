@@ -60,7 +60,7 @@ def get_logger(
         return logger
 
     level_name = "INFO"
-    log_filename = "efci_pipeline.log"
+    log_filename = "hci_pipeline.log"
     if config is not None:
         level_name = config.get("logging", {}).get("level", level_name)
         log_filename = config.get("logging", {}).get("log_filename", log_filename)

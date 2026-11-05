@@ -71,12 +71,12 @@ t=t.replace('#aviso-metodologico th{background:#063B6D','#aviso-metodologico th{
 t=t.replace('<p class="footnote">3iS · 2026</p>',f'<p class="footnote">Fuente: reportes SNGRE/ECU911, 2015–2025. Elaborado por 3iS · © 2026</p>')
 fa=t.index('<div class="modal-footer">'); fb=t.index('</div>\n  </div>\n</div>',fa)
 t=t[:fa]+f'<div class="modal-footer"><img src="{EU}" alt="UE" style="height:40px;margin-bottom:6px"><div class="name" style="font-style:normal">Elaborado por 3iS · © 2026</div>\n    '+t[fb:]
-# naming EFCI -> HCI
+# naming HCI -> HCI
 # Rename the index to HCI (Hazard Chronicity Index)
-t=t.replace('<b>EFCI (ENSO Flood/Hazard Chronicity Index)</b>','<b>HCI (Índice de Cronicidad de Amenazas)</b>')
-t=t.replace('<b>EFCI</b> (Inundación),\n    <b>EACI</b> (Aluvión), <b>ELCI</b> (Deslizamiento), <b>ESCI</b> (Socavamiento) y <b>EHCI</b>','<b>HCI de inundación</b>,\n    <b>HCI de aluvión</b>, <b>HCI de deslizamiento</b>, <b>HCI de socavamiento</b> y <b>HCI combinado</b>')
-t=t.replace('EFCI =','HCI =').replace('Cronicidad (EFCI)','Cronicidad (HCI)').replace('del EFCI','del HCI').replace('En el EFCI','En el HCI').replace('cronicidad EFCI','cronicidad HCI').replace('fuera del EFCI','fuera del HCI')
-t=t.replace('{ TODOS: "EHCI", flood: "EFCI", debris_flow: "EACI", landslide: "ELCI", scour: "ESCI" }','{ TODOS: "HCI", flood: "HCI", debris_flow: "HCI", landslide: "HCI", scour: "HCI" }')
+t=t.replace('<b>HCI (Hazard Chronicity Index)</b>','<b>HCI (Índice de Cronicidad de Amenazas)</b>')
+t=t.replace('<b>HCI</b> (Inundación),\n    <b>HCI</b> (Aluvión), <b>HCI</b> (Deslizamiento), <b>HCI</b> (Socavamiento) y <b>HCI</b>','<b>HCI de inundación</b>,\n    <b>HCI de aluvión</b>, <b>HCI de deslizamiento</b>, <b>HCI de socavamiento</b> y <b>HCI combinado</b>')
+t=t.replace('HCI =','HCI =').replace('Cronicidad (HCI)','Cronicidad (HCI)').replace('del HCI','del HCI').replace('En el HCI','En el HCI').replace('cronicidad HCI','cronicidad HCI').replace('fuera del HCI','fuera del HCI')
+t=t.replace('{ TODOS: "HCI", flood: "HCI", debris_flow: "HCI", landslide: "HCI", scour: "HCI" }','{ TODOS: "HCI", flood: "HCI", debris_flow: "HCI", landslide: "HCI", scour: "HCI" }')
 t=re.sub(r' — ver <i>docs/[^<]*</i>','',t); t=re.sub(r'\(<i>docs/[^<]*</i>\)|<i>docs/[^<]*</i>','',t)
 t=t.replace('docs/methodology/13_sensitivity_validation.md','')
 # colours JS
@@ -120,4 +120,4 @@ t=t[:m.start(1)]+json.dumps(d,ensure_ascii=False)+t[m.end(1):]
 t=t.replace('Hotspots (Getis-Ord Gi*)','Hotspots (Getis-Ord Gi*)')
 # Write the restyled dashboard
 open(dst,'w',encoding='utf-8').write(t)
-for pat in ['Jerson','jachicanoy','EFCI','EACI','ELCI','ESCI','EHCI','Montserrat','docs/','#063B6D','#ffffff1c']: print(pat,t.count(pat))
+for pat in ['Jerson','jachicanoy','HCI','HCI','HCI','HCI','HCI','Montserrat','docs/','#063B6D','#ffffff1c']: print(pat,t.count(pat))

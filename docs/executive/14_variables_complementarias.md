@@ -1,6 +1,6 @@
 # 14 — Qué más había en los datos y no se había usado (resumen ejecutivo)
 
-**Fase 14 del proyecto EFCI Ecuador — 18 de septiembre de 2026**
+**Fase 14 del proyecto HCI Ecuador — 18 de septiembre de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -23,12 +23,12 @@ importa de forma muy concreta: si una vía o un puente está dañado, la
 ayuda no llega, sin importar qué tan bien calculada esté la prioridad.
 
 **2. Un archivo oficial del gobierno, completo, nunca cruzado con el
-EFCI.** El mismo Excel de origen contiene la Resolución 193 del COE
+HCI.** El mismo Excel de origen contiene la Resolución 193 del COE
 Nacional — la lista oficial de 143 cantones que el gobierno ya
 declaró prioritarios ante El Niño — más un modelo entero de
 "escenarios de respuesta" (cuánta gente necesitaría ayuda en un
 escenario débil, fuerte o extraordinario, y qué nivel de respuesta
-activar). Nadie lo había comparado nunca con el EFCI.
+activar). Nadie lo había comparado nunca con el HCI.
 
 **3. Categorías humanitarias adicionales.** Familias afectadas (una
 unidad distinta a "personas"), personas y familias "damnificadas"
@@ -44,21 +44,21 @@ acogidas por otras familias, y pérdidas de bienes públicos y privados
   variables nuevas por cantón, y otra con la comparación contra el
   archivo del COE.
 - **12 variables nuevas** en el filtro del tablero interactivo.
-- **Un cruce completo del EFCI contra la lista oficial del COE** — el
+- **Un cruce completo del HCI contra la lista oficial del COE** — el
   hallazgo central de esta fase.
 
 ## El hallazgo del cruce con el COE — y qué significa
 
-Al comparar el EFCI con la lista oficial de 143 cantones prioritarios,
-2 de cada 3 cantones que el EFCI marca como "Alta" o "Muy Alta"
+Al comparar el HCI con la lista oficial de 143 cantones prioritarios,
+2 de cada 3 cantones que el HCI marca como "Alta" o "Muy Alta"
 cronicidad SÍ están en esa lista oficial — pero el otro tercio no. El
 caso más claro es **Ambato**: el segundo cantón con mayor cronicidad
-de todo el país según el EFCI, y no aparece en la lista oficial de 143
+de todo el país según el HCI, y no aparece en la lista oficial de 143
 cantones prioritarios. Un grupo de cantones amazónicos (Morona,
 Zamora, Pastaza, entre otros) tiene el mismo patrón.
 
-Esto no quiere decir que el EFCI esté mal, ni que la lista oficial
-esté mal — miden cosas distintas. El EFCI mira la historia completa
+Esto no quiere decir que el HCI esté mal, ni que la lista oficial
+esté mal — miden cosas distintas. El HCI mira la historia completa
 2015-2025 de 4 tipos de amenaza; el modelo del COE mira el peor
 evento único de solo inundación relativo a la población expuesta.
 Lo importante es que ahora hay evidencia concreta y cruzada para
@@ -66,7 +66,7 @@ llevar a una conversación con el COE Nacional: ¿debería Ambato (y el
 grupo amazónico) estar en una futura actualización de la lista
 oficial?
 
-También se comparó qué tan parecidos son los 2 números (EFCI del
+También se comparó qué tan parecidos son los 2 números (HCI del
 proyecto vs. "peso de vulnerabilidad" del COE) para los mismos
 cantones — el parecido es bajo (correlación débil, apenas
 significativa). Es información honesta que hay que tener presente: no
@@ -74,7 +74,7 @@ son intercambiables, son 2 lentes distintas sobre el mismo problema.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-El proyecto EFCI necesita poder responder "¿por qué estos cantones y
+El proyecto HCI necesita poder responder "¿por qué estos cantones y
 no otros?" frente a un revisor externo — y ahora, por primera vez,
 puede mostrar cómo se compara contra la propia designación oficial del
 gobierno, con nombres y números concretos (Ambato, el clúster

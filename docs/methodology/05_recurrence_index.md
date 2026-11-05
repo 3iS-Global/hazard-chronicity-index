@@ -88,7 +88,7 @@ primero, pero no hay evidencia en 2015-2025 de que ese caso se haya dado.
 `magnitud_enso_combinada` en vez de derivar solo de `icen_category` — el
 techo de la escala ahora sí se alcanza (1.0, "Muy Fuerte" según ONI, 8
 meses del episodio 2015-2016) donde antes el máximo observado era 0.75.
-Fase 8 (EFCI compuesto) se reejecutó sin cambios de código, heredando los
+Fase 8 (HCI compuesto) se reejecutó sin cambios de código, heredando los
 nuevos insumos de Recurrencia y Magnitud — 221 cantones, 24 provincias,
 rango [0,1] verificado.
 
@@ -199,7 +199,7 @@ que el propio equipo de FAO/COE ya había usado.
 
 ### 4.4 Validación de la hipótesis central del proyecto (antes de calcular el índice)
 
-Se contrastó la hipótesis que justifica todo el diseño del EFCI (Fase 0,
+Se contrastó la hipótesis que justifica todo el diseño del HCI (Fase 0,
 H1: los eventos ocurren con mayor frecuencia durante episodios El Niño):
 tasa media de eventos por mes, dentro de meses El Niño vs. fuera de ellos.
 
@@ -211,7 +211,7 @@ Se reporta el resultado tal cual salió de los datos, no se ajustó nada para
 que "se viera bien" — de haber salido cercano a 1x (sin diferencia), habría
 cuestionado el diseño completo del proyecto. El resultado obtenido respalda
 empíricamente, con datos propios de Ecuador 2015-2025, la premisa
-fundacional del EFCI.
+fundacional del HCI.
 
 ### 4.5 Fórmula del Índice de Recurrencia: tasa de meses con evento, no conteo crudo
 
@@ -222,7 +222,7 @@ fundacional del EFCI.
 meses ENSO) — se descartó porque podría superar 1 si una unidad
 administrativa tiene varios eventos en un mismo mes, rompiendo la escala
 0-1 que comparten los demás índices (Severidad, Fase 4) y que se necesita
-para combinarlos sin que uno domine el EFCI compuesto solo por su rango
+para combinarlos sin que uno domine el HCI compuesto solo por su rango
 numérico (Fase 8).
 
 ### 4.6 Cobertura completa en la vista `"TODOS"` — bug detectado y corregido antes de exportar
@@ -318,7 +318,7 @@ cantón), `hazard_type`, `meses_enso_con_evento`, `n_eventos_en_meses_enso`
 
 ## 11. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (fórmula de Recurrencia),
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (fórmula de Recurrencia),
   §19.4 (decisión ICEN vs. ONI).
 - NOAA/CPC — ERSSTv5 monthly Niño region indices
   (`ersst5.nino.mth.91-20.ascii`).

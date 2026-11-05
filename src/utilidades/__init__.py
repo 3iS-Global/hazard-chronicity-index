@@ -1,4 +1,4 @@
-"""Utilidades transversales del proyecto EFCI Ecuador.
+"""Utilidades transversales del proyecto HCI Ecuador.
 
 Este paquete contiene únicamente helpers de uso general (configuración,
 logging, E/S) reutilizados por notebooks y módulos de todas las fases.

@@ -1,4 +1,4 @@
-"""Componente predictivo del EFCI (Fase 12, Fase 0 §10).
+"""Componente predictivo del HCI (Fase 12, Fase 0 §10).
 
 Estima el impacto esperado (población, agricultura, vivienda) y la
 probabilidad de severidad alta para cada cantón ante un nuevo episodio

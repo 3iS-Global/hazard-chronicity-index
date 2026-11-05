@@ -1,6 +1,6 @@
 # 07 — Índice de Magnitud ENSO (resumen ejecutivo)
 
-**Fase 7 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 7 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Actualizado el 17 de agosto de 2026 — ver "Un cambio importante hecho después" al final**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
@@ -47,14 +47,14 @@ cuando se pruebe cuál funciona mejor dentro del índice completo.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-Con esta fase ya están listos los cuatro ingredientes del EFCI: Severidad,
+Con esta fase ya están listos los cuatro ingredientes del HCI: Severidad,
 Recurrencia, Persistencia y Magnitud ENSO (con sus dos versiones). La Fase
 8 los combina en el índice final, y ahí se decide cuál de las dos versiones
 de Magnitud ENSO usar.
 
 ## ¿Qué falta?
 
-- Fase 8: combinar los cuatro índices en el EFCI final, con un análisis
+- Fase 8: combinar los cuatro índices en el HCI final, con un análisis
   que pruebe distintas variantes de pesos y métodos —incluida la elección
   entre las dos versiones de Magnitud ENSO— antes de considerar el
   resultado definitivo.

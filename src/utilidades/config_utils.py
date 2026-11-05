@@ -1,4 +1,4 @@
-"""Carga y validación de la configuración YAML del proyecto EFCI Ecuador.
+"""Carga y validación de la configuración YAML del proyecto HCI Ecuador.
 
 English:
 Load and validate the project's YAML configuration.

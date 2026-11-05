@@ -1,6 +1,6 @@
 # 12 — El componente predictivo (resumen ejecutivo)
 
-**Fase 12 (extensión) del proyecto EFCI Ecuador — completada el 6 de agosto de 2026**
+**Fase 12 (extensión) del proyecto HCI Ecuador — completada el 6 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?

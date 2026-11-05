@@ -1,11 +1,11 @@
 # 09 — ¿Dónde se agrupa la cronicidad? (resumen ejecutivo)
 
-**Fase 9 de 10 del proyecto EFCI Ecuador — completada el 6 de agosto de 2026**
+**Fase 9 de 10 del proyecto HCI Ecuador — completada el 6 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
 
-El EFCI de la Fase 8 responde "¿qué tan crónico es cada cantón?", uno
+El HCI de la Fase 8 responde "¿qué tan crónico es cada cantón?", uno
 por uno. Pero para decidir dónde concentrar recursos de Acción
 Anticipatoria, importa también otra pregunta: ¿esos cantones crónicos
 están dispersos por todo el país al azar, o forman zonas geográficas
@@ -46,7 +46,7 @@ estadísticas espaciales, no solo con un mapa de colores.
   zonas no reciben la misma influencia costera de El Niño que el resto
   del país.
 
-- **Un hallazgo con matiz interesante**: Cuenca tiene un puntaje EFCI
+- **Un hallazgo con matiz interesante**: Cuenca tiene un puntaje HCI
   relativamente alto por sí sola, pero está rodeada de cantones de
   puntaje bajo. Esto la hace aparecer como "zona fría" en un análisis
   (porque se mide junto con su entorno) y como un caso atípico en otro
@@ -54,12 +54,12 @@ estadísticas espaciales, no solo con un mapa de colores.
   se complementan: Cuenca es relativamente crónica dentro de una región
   que, en conjunto, no lo es tanto.
 
-- **El hallazgo más útil para entender el EFCI**: las zonas calientes de
+- **El hallazgo más útil para entender el HCI**: las zonas calientes de
   cronicidad están impulsadas sobre todo por qué tan seguido ocurren
   eventos y por cuánto tiempo se sostienen (Recurrencia y Persistencia),
   no tanto por qué tan graves son individualmente (Severidad) ni por la
   fuerza de El Niño (Magnitud ENSO). El 82% de las zonas calientes de
-  EFCI también son zonas calientes de Recurrencia, pero solo el 25%
+  HCI también son zonas calientes de Recurrencia, pero solo el 25%
   también lo son de Magnitud ENSO. Es decir: los "clusters" geográficos
   del país reflejan sobre todo procesos sostenidos en el tiempo, no
   eventos puntuales extremos — información valiosa porque sugiere qué

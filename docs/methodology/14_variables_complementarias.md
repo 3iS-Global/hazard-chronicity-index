@@ -1,6 +1,6 @@
 # 14 — Variables complementarias no incorporadas: conectividad, bienes y validación cruzada con el COE Nacional
 
-**Fase 14 del proyecto EFCI Ecuador — 18 de septiembre de 2026**
+**Fase 14 del proyecto HCI Ecuador — 18 de septiembre de 2026**
 **Audiencia:** equipo técnico del proyecto
 
 ## 1. Objetivo
@@ -14,7 +14,7 @@ origen (`Indices ENSO (1).xlsx`, 20 hojas) contra el pipeline actual, y
 ejecuta las 3 líneas de trabajo que Jerson priorizó de los hallazgos:
 
 1. Conectividad vial (vías y puentes afectados).
-2. Validación cruzada del EFCI contra 2 fuentes oficiales externas
+2. Validación cruzada del HCI contra 2 fuentes oficiales externas
    (Resolución 193 del COE Nacional y su modelo de Escenarios de
    Respuesta) encontradas en el mismo archivo.
 3. Categorías humanitarias y de bienes adicionales (familias afectadas,
@@ -87,7 +87,7 @@ y `personas_acogientes` toman directamente el máximo de un solo
 evento (no son pares afectado+destruido).
 
 Igual que con Educación/Salud, **estas variables son descriptivas —
-no se incorporaron a la fórmula del Índice de Severidad ni del EFCI**.
+no se incorporaron a la fórmula del Índice de Severidad ni del HCI**.
 Cambiar los pesos del índice es una decisión metodológica separada,
 mayor, que requeriría repetir el análisis de sensibilidad de la Fase
 13 — no se hizo sin una decisión explícita del equipo.
@@ -101,16 +101,16 @@ nulos): `vias_metros_afectados`, `puentes_total`,
 
 - 2 mapas nuevos en el atlas estático (`Step10a_Ecuador_Static_Maps.ipynb`):
   `11_vias_afectadas.png` y `12_puentes_afectados.png`. El atlas
-  (`Atlas_EFCI_Ecuador.pdf`) pasa de 11 a 13 páginas (portada + 12
+  (`Atlas_HCI_Ecuador.pdf`) pasa de 11 a 13 páginas (portada + 12
   mapas). Los demás componentes (públicos/privados, humanitarias) no
   se mapearon en esta ronda — se priorizó vías y puentes por volumen
   de datos; quedan disponibles en `mapa_master_canton.csv` para quien
   quiera mapearlos.
-- 2 hojas nuevas en `EFCI_Ecuador_Estadisticas.xlsx`:
+- 2 hojas nuevas en `HCI_Ecuador_Estadisticas.xlsx`:
   `Variables_Complementarias` (ranking de 221 cantones por las 8
   variables nuevas) y `Validacion_COE` (ver sección 7).
 - 12 variables nuevas en el filtro del tablero interactivo
-  (`EFCI_Ecuador_Dashboard.html`), re-agregadas con las mismas 7
+  (`HCI_Ecuador_Dashboard.html`), re-agregadas con las mismas 7
   llaves de agrupación (año/mes/provincia/cantón/categoría ENSO/
   amenaza) que las 13 variables ya existentes. Fila a fila: 9,604 =
   9,604 (coincide exacto con el dashboard antes del cambio). La suma
@@ -123,7 +123,7 @@ nulos): `vias_metros_afectados`, `puentes_total`,
 
 Además de `BD_2015_2025`, el archivo de origen contiene un marco
 paralelo construido aparentemente por o para el COE Nacional, nunca
-cruzado con el EFCI:
+cruzado con el HCI:
 
 - **Hoja "Resolución 193"**: lista oficial de 143 cantones designados
   prioritarios por Resolución 193 del COE Nacional.
@@ -143,7 +143,7 @@ cruzado con el EFCI:
 Este marco es exactamente la clase de fuente de validación externa
 que la sección de Validación del diseño original del proyecto pide
 (gobierno, además de UNOSAT/EM-DAT/DesInventar/Copernicus EMS) y
-nunca se había cruzado con el EFCI.
+nunca se había cruzado con el HCI.
 
 ## 7. Validación cruzada — metodología y resultados
 
@@ -159,30 +159,30 @@ cantón sino la cabecera de Isabela — señalado como tal en la propia
 hoja "Notas Metodológicas" del origen, no es un error de esta
 homologación).
 
-**a) Traslape EFCI vs Resolución 193.** De los 32 cantones que el
-EFCI clasifica Alta o Muy Alta, 17 (53.1%) están también en la lista
+**a) Traslape HCI vs Resolución 193.** De los 32 cantones que el
+HCI clasifica Alta o Muy Alta, 17 (53.1%) están también en la lista
 oficial de 143 cantones del COE. Mirado al revés: de los 143 cantones
-de Resolución 193, solo 17 (11.9%) tienen clase EFCI Alta o Muy Alta
-— la mayoría de la lista oficial (110 de 143) tiene clase EFCI
+de Resolución 193, solo 17 (11.9%) tienen clase HCI Alta o Muy Alta
+— la mayoría de la lista oficial (110 de 143) tiene clase HCI
 Moderada o Baja.
 
-15 cantones con clase EFCI Alta o Muy Alta **no están** en la lista
+15 cantones con clase HCI Alta o Muy Alta **no están** en la lista
 oficial de 143 — el caso más notable es **Ambato** (Tungurahua),
-2º lugar nacional en EFCI (Muy Alta, 0.537), completamente ausente de
+2º lugar nacional en HCI (Muy Alta, 0.537), completamente ausente de
 Resolución 193. El resto del grupo se concentra en la región
 amazónica (Morona, Zamora, Pastaza, El Chaco, Archidona, Mera, Limón
 Indanza, Santiago, Palanda, Quijos) y en las tierras altas de
 Tungurahua/Chimborazo (Baños de Agua Santa, San Pedro de Pelileo,
 Guano, Riobamba).
 
-**b) Correlación EFCI vs "Peso de Vulnerabilidad Real".** Spearman
+**b) Correlación HCI vs "Peso de Vulnerabilidad Real".** Spearman
 ρ=0.169 (p=0.044, n=143) — una correlación débil, apenas
 estadísticamente significativa.
 
-**c) Cruce clase EFCI × Nivel COE Proyectado (Escenario Fuerte).**
-Coherente en los extremos (los 2 cantones EFCI Muy Alta caen en Nivel
+**c) Cruce clase HCI × Nivel COE Proyectado (Escenario Fuerte).**
+Coherente en los extremos (los 2 cantones HCI Muy Alta caen en Nivel
 4 - Desastre Nacional), pero con dispersión considerable en el medio
-(las clases Moderada y Baja del EFCI se reparten entre los 5 niveles
+(las clases Moderada y Baja del HCI se reparten entre los 5 niveles
 COE sin un patrón claro). Tabla completa en
 `data/processed/validacion_coe_canton.csv`.
 
@@ -191,7 +191,7 @@ COE sin un patrón claro). Tabla completa en
 Esto **no es evidencia de que uno de los dos índices esté mal**. Miden
 cosas distintas por diseño:
 
-- El EFCI mide **cronicidad histórica multi-amenaza** (recurrencia +
+- El HCI mide **cronicidad histórica multi-amenaza** (recurrencia +
   severidad + persistencia + magnitud ENSO, 2015-2025, las 4 amenazas
   del proyecto: inundación, deslizamiento, socavamiento, aluvión).
 - El "Peso de Vulnerabilidad Real" del COE mide **la intensidad de un
@@ -204,8 +204,8 @@ cosas distintas por diseño:
   cantones se agregaron después con población estimada por ratio
   provincial (Colimes, Coronel Marcelino Maridueña, Jama).
 
-El hallazgo más accionable no es "el EFCI está mal" ni "Resolución
-193 está mal" — es que **el EFCI identifica cantones de alta
+El hallazgo más accionable no es "el HCI está mal" ni "Resolución
+193 está mal" — es que **el HCI identifica cantones de alta
 cronicidad (Ambato el más claro, seguido de un clúster amazónico) que
 la designación oficial actual no cubre**. Eso es información nueva y
 concreta para la conversación de gobierno/validación (Sección 12 del
@@ -221,7 +221,7 @@ fuentes.
   se revalida.
 - Las variables de conectividad/bienes/humanitarias son descriptivas,
   no ponderadas — no se debe asumir que un cantón con alto
-  `vias_metros_afectados` pero EFCI bajo es "menos prioritario"; son
+  `vias_metros_afectados` pero HCI bajo es "menos prioritario"; son
   lentes distintos.
 - El desfase de 0.07% en vías en el dashboard (mismo origen que el
   gap de Educación/Salud: 35 eventos sin provincia geocodificada) no

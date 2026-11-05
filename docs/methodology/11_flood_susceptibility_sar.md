@@ -10,26 +10,26 @@
 Producir un mapa nacional de **frecuencia de inundación detectada por
 SAR** derivado de imágenes de radar Sentinel-1 (no de reportes de
 desastre como el resto del proyecto), clasificado en 5 categorías igual
-que el EFCI —
+que el HCI —
 
 **Nota de terminología (2026-08-06):** este producto mide una sola de
-las 4 dimensiones que componen la "cronicidad" del EFCI (recurrencia,
+las 4 dimensiones que componen la "cronicidad" del HCI (recurrencia,
 severidad, persistencia, magnitud ENSO) — específicamente una versión
 observacional y dispersa de la recurrencia (9 fechas puntuales, no una
-serie continua de 132 meses como el `recurrence_index` del EFCI). Por
+serie continua de 132 meses como el `recurrence_index` del HCI). Por
 eso se nombra explícitamente "Frecuencia de Inundación Detectada por
 SAR", no "Cronicidad SAR" ni "Susceptibilidad SAR" — el primer término
 sobre-prometería (sugiere las 4 dimensiones), el segundo implica un
 modelo predictivo que este producto tampoco es (es observacional, no
 modelado). Debe leerse como un dato independiente comparable contra el
-`recurrence_index`, no como un sustituto del EFCI compuesto —
+`recurrence_index`, no como un sustituto del HCI compuesto —
 donde la categoría más alta corresponde a las áreas más pequeñas que se
 inundaron repetidamente, y la más baja a las áreas más extensas que se
 inundaron solo una vez (la forma típica de un mapa de frecuencia de
 inundación: el cauce/zona baja se repite siempre, la franja de
 desbordamiento ocasional cubre mucha más área).
 
-Esto complementa —no reemplaza— al EFCI: el EFCI mide cronicidad a partir
+Esto complementa —no reemplaza— al HCI: el HCI mide cronicidad a partir
 de **reportes humanos** de desastre (SNGRE/ECU911); este producto mide
 extensión física real de agua **observada por satélite**, independiente de
 si hubo o no un reporte.

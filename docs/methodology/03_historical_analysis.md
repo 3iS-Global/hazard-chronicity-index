@@ -13,7 +13,7 @@ eventos, años/meses afectados, frecuencia por categoría ENSO, estadísticos
 de impacto (media/mediana/máximo/desviación estándar) y tendencia temporal.
 
 Esta fase **no** calcula los índices compuestos (Severidad, Recurrencia,
-Persistencia, EFCI — Fase 4 a 8). Produce los insumos descriptivos que esos
+Persistencia, HCI — Fase 4 a 8). Produce los insumos descriptivos que esos
 índices normalizarán y ponderarán, y es también el primer punto donde el
 proyecto entrega cifras interpretables (rankings, tendencias) a alguien no
 técnico.
@@ -190,7 +190,7 @@ Como referencia y control de calidad, no como resultado final del proyecto
   `debris_flow` (73%) — son los dos peligros con menos eventos totales
   (1,152 y 685 respectivamente), y la Fase 5-8 deberá decidir cómo tratar
   cantones sin tendencia calculable (¿excluir del componente de tendencia
-  del EFCI, o asumir neutralidad?).
+  del HCI, o asumir neutralidad?).
 - No se aplicó ningún ajuste por autocorrelación espacial entre cantones
   vecinos en este análisis — cada unidad administrativa se trata como
   independiente. El análisis espacial explícito (Getis-Ord Gi*, Moran's I)
@@ -245,7 +245,7 @@ Como referencia y control de calidad, no como resultado final del proyecto
 
 ## 11. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §8 (Fase 3), §19.3, §19.4.
+- Fase 0 — Diseño Conceptual HCI Ecuador, §8 (Fase 3), §19.3, §19.4.
 - `docs/methodology/02_spatial_integration.md` (Fase 2, insumo de esta fase;
   §4.4, §4.7, §4.8, §9).
 - Hussain, M. & Mahmud, I. (2019). *pyMannKendall: a python package for

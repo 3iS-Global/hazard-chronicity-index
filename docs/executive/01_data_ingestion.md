@@ -1,6 +1,6 @@
 # 01 — Construcción de la base histórica de eventos (resumen ejecutivo)
 
-**Fase 1 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 1 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -57,7 +57,7 @@ eventos exactos vamos a hablar, y qué tan buena es esa información?**
 
 Esta base limpia y verificada es el cimiento de todo lo que sigue: sin ella
 no se puede calcular con confianza qué tan seguido se inunda cada cantón, qué
-tan grave ha sido el impacto, ni construir el índice de cronicidad (EFCI)
+tan grave ha sido el impacto, ni construir el índice de cronicidad (HCI)
 que finalmente ayudará a decidir dónde actuar antes de que ocurra el próximo
 evento de El Niño. Es, en términos simples, pasar de "una carpeta de reportes
 sueltos" a "una base de datos que se puede analizar con rigor científico".

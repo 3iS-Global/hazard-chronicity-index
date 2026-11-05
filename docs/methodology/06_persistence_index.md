@@ -136,7 +136,7 @@ Columnas: `province_code`, `province_name_official`,
 - Se asume que un mes con un solo evento aislado cuenta igual que un mes
   con impactos severos y prolongados dentro del mismo mes — la Persistencia
   mide *presencia temporal* de afectación, no su magnitud (eso ya lo cubre
-  Severidad, Fase 4); combinarlas es tarea del EFCI compuesto (Fase 8).
+  Severidad, Fase 4); combinarlas es tarea del HCI compuesto (Fase 8).
 - Se asume que la racha de un mes de "veda" entre dos eventos cercanos
   rompe la persistencia (un mes sin ningún evento reportado corta la racha,
   aunque el siguiente evento esté relacionado con el mismo episodio
@@ -169,7 +169,7 @@ Columnas: `province_code`, `province_name_official`,
 
 ## 11. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (Persistencia).
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (Persistencia).
 - `docs/methodology/03_historical_analysis.md` (insumo de conteo de eventos
   por mes).
 - `docs/methodology/05_recurrence_index.md` §4.3 (definición de "evento

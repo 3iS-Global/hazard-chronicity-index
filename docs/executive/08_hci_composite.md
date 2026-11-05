@@ -1,13 +1,13 @@
-# 08 — El índice EFCI completo (resumen ejecutivo)
+# 08 — El índice HCI completo (resumen ejecutivo)
 
-**Fase 8 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026, actualizada el 6 y el 17 de agosto de 2026**
+**Fase 8 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026, actualizada el 6 y el 17 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
 
 Esta es la fase donde los cuatro ingredientes construidos hasta ahora
 (Severidad, Recurrencia, Persistencia, Magnitud de El Niño) se combinan por
-primera vez en un solo número: el EFCI, el índice de cronicidad de
+primera vez en un solo número: el HCI, el índice de cronicidad de
 inundaciones por El Niño para cada cantón y provincia de Ecuador. También
 es la fase donde se pone a prueba qué tan confiable es ese número —no basta
 con calcularlo una vez, hay que comprobar si cambia mucho según pequeñas
@@ -99,7 +99,7 @@ completo en el resumen ejecutivo de la Fase 4.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-Este es, en esencia, el primer EFCI completo del proyecto — la
+Este es, en esencia, el primer HCI completo del proyecto — la
 herramienta central que el diseño original proponía para apoyar decisiones
 de Acción Anticipatoria en Ecuador. Las pruebas de sensibilidad no son un
 paso opcional: son lo que separa un número calculado una sola vez de un
@@ -120,7 +120,7 @@ Fase 5), se recalculó el índice completo. El **top 3 se mantiene
 igual — Quito, Ambato y Chone, en ese orden** — así que la conclusión
 principal del proyecto no cambia. Lo que sí cambió, de forma medible, es
 uno de los ingredientes: Quito ahora también destaca en Recurrencia por sí
-sola (antes lideraba el EFCI sobre todo por Persistencia y Severidad, no
+sola (antes lideraba el HCI sobre todo por Persistencia y Severidad, no
 por Recurrencia) — un ajuste que refina el "por qué" detrás del número,
 sin cambiar el "quién" está en los primeros lugares.
 

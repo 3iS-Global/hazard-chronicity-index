@@ -1,6 +1,6 @@
 # 05 — Región Niño 1+2 e Índice de Recurrencia (resumen ejecutivo)
 
-**Fase 5 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 5 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Actualizado el 17 de agosto de 2026 — ver "Un cambio importante hecho después" al final**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
@@ -64,7 +64,7 @@ está diseñado para detectar y corregir, no para dejar pasar.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-Con este paso, el proyecto ya tiene dos de los cuatro ingredientes del EFCI
+Con este paso, el proyecto ya tiene dos de los cuatro ingredientes del HCI
 final: Severidad (Fase 4) y ahora Recurrencia. Y de regalo, se resolvió una
 pregunta metodológica que llevaba abierta desde el diseño original
 (¿ICEN u ONI?) con evidencia concreta, no con una elección arbitraria — y
@@ -78,7 +78,7 @@ durante El Niño) es cierta para Ecuador 2015-2025.
 - Fase 7: Índice de Magnitud de El Niño — ya con ICEN confirmado como
   referencia oficial.
 - Fase 8: combinar Severidad, Recurrencia, Persistencia y Magnitud en el
-  EFCI final, con el análisis de sensibilidad que el diseño original exige.
+  HCI final, con el análisis de sensibilidad que el diseño original exige.
 
 ## Un cambio importante hecho después (17 de agosto de 2026)
 
@@ -100,7 +100,7 @@ cantones más recurrentes cambia un poco: **Ambato sigue en primer lugar**
 al top 5** — antes no aparecía, ahora es el segundo cantón con más
 recurrencia, porque varios de sus eventos caían justamente en esos meses
 "solo ONI" que antes no contaban. El resto del ranking (Morona, Baños de
-Agua Santa, Loja) se mantiene estable. Las Fases 7 (Magnitud) y 8 (EFCI
+Agua Santa, Loja) se mantiene estable. Las Fases 7 (Magnitud) y 8 (HCI
 compuesto) se recalcularon con este mismo ajuste, en cascada.
 
 

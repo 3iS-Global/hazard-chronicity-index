@@ -33,13 +33,13 @@ volumen de trabajo:
 
 | Notebook | Contenido | Salida principal |
 |---|---|---|
-| `Step10a_Ecuador_Static_Maps.ipynb` | Dataset maestro cantonal + 8 mapas estáticos + atlas PDF | `outputs/maps/*.png`, `outputs/reports/Atlas_EFCI_Ecuador.pdf` |
+| `Step10a_Ecuador_Static_Maps.ipynb` | Dataset maestro cantonal + 8 mapas estáticos + atlas PDF | `outputs/maps/*.png`, `outputs/reports/Atlas_HCI_Ecuador.pdf` |
 | `Step10b_Ecuador_Interactive_Maps.ipynb` | 8 mapas interactivos (Leaflet/folium) | `outputs/maps/interactivos/*.html` |
-| `Step10c_Ecuador_Statistical_Outputs.ipynb` | Rankings, tendencias mensual/anual, análisis ENSO | `outputs/tables/EFCI_Ecuador_Estadisticas.xlsx` |
-| `Step10d_Ecuador_Dashboard_HTML.ipynb` | Dashboard HTML autónomo con datos embebidos | `outputs/dashboard/EFCI_Ecuador_Dashboard.html` |
+| `Step10c_Ecuador_Statistical_Outputs.ipynb` | Rankings, tendencias mensual/anual, análisis ENSO | `outputs/tables/HCI_Ecuador_Estadisticas.xlsx` |
+| `Step10d_Ecuador_Dashboard_HTML.ipynb` | Dashboard HTML autónomo con datos embebidos | `outputs/dashboard/HCI_Ecuador_Dashboard.html` |
 | `Step10e_Ecuador_Dashboard_Interactive.ipynb` | Dashboard editable (ipywidgets) | (uso interactivo dentro de Jupyter, no exporta archivo) |
-| `Step10f_Ecuador_Profiles.ipynb` | Perfiles de 24 provincias + 221 cantones | `outputs/reports/Perfiles_EFCI_Ecuador.pdf` (246 páginas) |
-| `build_report_final.js` (Node.js/docx-js, fuera del árbol `notebooks/` por ser JS, no Python) | Reporte ejecutivo nacional | `outputs/reports/EFCI_Ecuador_Reporte_Ejecutivo.docx` |
+| `Step10f_Ecuador_Profiles.ipynb` | Perfiles de 24 provincias + 221 cantones | `outputs/reports/Perfiles_HCI_Ecuador.pdf` (246 páginas) |
+| `build_report_final.js` (Node.js/docx-js, fuera del árbol `notebooks/` por ser JS, no Python) | Reporte ejecutivo nacional | `outputs/reports/HCI_Ecuador_Reporte_Ejecutivo.docx` |
 
 ## 4. Decisiones metodológicas y su justificación
 
@@ -47,7 +47,7 @@ volumen de trabajo:
 
 Construido una sola vez en Step10a y reutilizado por Step10b, d, e, f
 — evita recalcular la misma unión de tablas 5 veces. Combina, por
-`canton_code`: los 4 sub-índices + EFCI (Fase 8), frecuencia de
+`canton_code`: los 4 sub-índices + HCI (Fase 8), frecuencia de
 inundaciones y años afectados (Fase 3), frecuencia de eventos en
 meses "El Niño" (mismo criterio de Fase 5 §4.3), clasificación de
 hotspot Gi* (Fase 9), y máximos históricos de población/agricultura/
@@ -64,14 +64,14 @@ desde la Fase 2, consistente con los rankings y perfiles del resto de
 la fase. No se generó un segundo set de mapas a nivel provincia
 (los rankings estadísticos sí cubren ambos niveles, ver §4.3).
 
-### 4.3 Clasificación de mapas: Jenks para las 6 variables continuas + reutilización de clases ya fijadas para EFCI y Hotspots
+### 4.3 Clasificación de mapas: Jenks para las 6 variables continuas + reutilización de clases ya fijadas para HCI y Hotspots
 
 Los 6 mapas de variables continuas (frecuencia, severidad, frecuencia
 ENSO, población, agricultura, vivienda) se clasifican con quiebres
 naturales (Jenks, 5 clases) — misma convención que el resto del
-proyecto desde la Fase 8. Los mapas de EFCI y de Hotspots **no
+proyecto desde la Fase 8. Los mapas de HCI y de Hotspots **no
 recalculan clases**: reutilizan las ya fijadas en Fase 8
-(`clase_efci`, 5 categorías Jenks) y Fase 9 (`gi_clase_efci`, 7
+(`clase_hci`, 5 categorías Jenks) y Fase 9 (`gi_clase_hci`, 7
 niveles de significancia) — evita que el mismo cantón aparezca en una
 clase distinta en el mapa de esta fase que en la tabla de la fase que
 lo originó.
@@ -148,11 +148,11 @@ completo — 9 páginas, sin errores de formato ni de datos.
 ## 6. Esquema de salida (resumen — detalle en cada notebook)
 
 - `outputs/maps/*.png` (8) + `outputs/maps/interactivos/*.html` (8)
-- `outputs/reports/Atlas_EFCI_Ecuador.pdf` (9 páginas)
-- `outputs/tables/EFCI_Ecuador_Estadisticas.xlsx` (6 hojas)
-- `outputs/dashboard/EFCI_Ecuador_Dashboard.html`
-- `outputs/reports/Perfiles_EFCI_Ecuador.pdf` (246 páginas)
-- `outputs/reports/EFCI_Ecuador_Reporte_Ejecutivo.docx`
+- `outputs/reports/Atlas_HCI_Ecuador.pdf` (9 páginas)
+- `outputs/tables/HCI_Ecuador_Estadisticas.xlsx` (6 hojas)
+- `outputs/dashboard/HCI_Ecuador_Dashboard.html`
+- `outputs/reports/Perfiles_HCI_Ecuador.pdf` (246 páginas)
+- `outputs/reports/HCI_Ecuador_Reporte_Ejecutivo.docx`
 - `data/processed/mapa_master_canton.{gpkg,csv}` (insumo intermedio reutilizado por toda la fase)
 
 ## 7. Limitaciones
@@ -224,7 +224,7 @@ Población, Vivienda y Agricultura, que sí tienen mapa individual.
 - Atlas estático (Step10a): 2 mapas nuevos (`09_educacion_afectada.png`,
   `10_salud_afectada.png`) — el atlas PDF pasa de 8 a 10 mapas (11 páginas
   con portada).
-- `EFCI_Ecuador_Estadisticas.xlsx`: nueva hoja `Infraestructura_Social`
+- `HCI_Ecuador_Estadisticas.xlsx`: nueva hoja `Infraestructura_Social`
   (ranking de 221 cantones + resumen nacional).
 - Dashboard interactivo: 4 variables nuevas en el filtro "Variable de
   Impacto" (`schools_affected`, `schools_destroyed`,
@@ -251,8 +251,8 @@ salud afectados (5 del total de 320). El Excel y los mapas del Atlas
 
 ## 12. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (productos), §14
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (productos), §14
   (entregables esperados).
-- `docs/methodology/08_efci_composite.md` (fuente del EFCI y clases
+- `docs/methodology/08_hci_composite.md` (fuente del HCI y clases
   reutilizadas en los mapas), `09_spatial_analysis.md` (fuente de los
   hotspots reutilizados en el mapa 8 y el reporte ejecutivo §5.2).

@@ -1,6 +1,6 @@
 # 06 — Índice de Persistencia (resumen ejecutivo)
 
-**Fase 6 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 6 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -47,7 +47,7 @@ el diseño original del proyecto no especificó pesos para este índice).
 ## ¿Cómo contribuye esto al objetivo final?
 
 Con esta fase, el proyecto ya tiene tres de los cuatro ingredientes del
-EFCI final: Severidad, Recurrencia y ahora Persistencia. Solo falta la
+HCI final: Severidad, Recurrencia y ahora Persistencia. Solo falta la
 Magnitud de El Niño (próxima fase) para poder combinarlos en el índice
 compuesto.
 
@@ -55,6 +55,6 @@ compuesto.
 
 - Fase 7: Índice de Magnitud de El Niño, usando ICEN (ya confirmado como
   referencia oficial del proyecto en la Fase 5).
-- Fase 8: combinar los cuatro índices en el EFCI final, con un análisis que
+- Fase 8: combinar los cuatro índices en el HCI final, con un análisis que
   pruebe qué tan sensibles son los resultados a los pesos elegidos —
   incluidos los de esta fase, que por ahora se dejaron en partes iguales.

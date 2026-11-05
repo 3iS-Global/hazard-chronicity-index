@@ -1,11 +1,11 @@
 # 13 — Poniendo a prueba los pesos del índice, a fondo (resumen ejecutivo)
 
-**Fase 13 del proyecto EFCI Ecuador — completada el 4 de septiembre de 2026**
+**Fase 13 del proyecto HCI Ecuador — completada el 4 de septiembre de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
 
-La fórmula del EFCI le da distinta importancia a cada ingrediente: 35%
+La fórmula del HCI le da distinta importancia a cada ingrediente: 35%
 Recurrencia, 30% Severidad, 20% Persistencia, 15% Magnitud de El Niño —
 y dentro de Severidad, otros 5 pesos más (30% Población, 25% Vivienda,
 20% Agricultura, 15% Ganadería, 10% Infraestructura). Todos esos números
@@ -111,14 +111,14 @@ de combinaciones es más difícil de "voltear" por accidente.
 Un índice que va a apoyar decisiones reales de Acción Anticipatoria —
 priorizar dónde llega ayuda antes de que ocurra el desastre — necesita
 poder responder con evidencia a la pregunta "¿por qué estos pesos y no
-otros?". Esta fase es exactamente eso: no cambia el EFCI que ya se
+otros?". Esta fase es exactamente eso: no cambia el HCI que ya se
 calculó, pone a prueba qué tan sólido es, con el mismo rigor que
 exigiría un revisor técnico externo antes de aprobar su uso operativo.
 
 ## ¿Qué falta?
 
 - Decidir si el hallazgo sobre el peso de Magnitud de El Niño amerita
-  ajustarlo en una futura versión del EFCI — por ahora solo se documenta
+  ajustarlo en una futura versión del HCI — por ahora solo se documenta
   la evidencia, no se cambia nada.
-- Seguir pendiente, como en fases anteriores: comparar el EFCI contra
+- Seguir pendiente, como en fases anteriores: comparar el HCI contra
   reportes internacionales de desastres (EM-DAT, DesInventar, UNOSAT).

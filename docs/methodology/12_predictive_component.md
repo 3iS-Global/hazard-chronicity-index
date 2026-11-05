@@ -1,4 +1,4 @@
-# 12 — Componente Predictivo del EFCI
+# 12 — Componente Predictivo del HCI
 
 **Fase:** 12 (extensión, corresponde a Fase 0 §10 "Future Predictive Component")
 **Notebook asociado:** `notebooks/Step12_Ecuador_Predictive_Component.ipynb` (ejecutado íntegramente en este entorno, sin dependencias externas)
@@ -89,7 +89,7 @@ igual convención que Fases 5-9: cantones sin eventos quedan en 0, nunca ausente
   Extraordinario=1.00) de los meses del episodio — variable climática, no
   espacial, igual para todos los cantones de un mismo episodio.
 
-**Nota metodológica sobre los targets:** a diferencia del EFCI (índice 0-1
+**Nota metodológica sobre los targets:** a diferencia del HCI (índice 0-1
 normalizado), aquí se predicen **magnitudes crudas** (personas, hectáreas,
 viviendas), no un índice relativo — porque un plan de Acción Anticipatoria necesita
 "cuántas personas esperar", no "qué tan crónico en una escala relativa". Panel final:

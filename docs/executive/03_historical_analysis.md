@@ -1,6 +1,6 @@
 # 03 — Primer análisis histórico por provincia y cantón (resumen ejecutivo)
 
-**Fase 3 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 3 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -79,7 +79,7 @@ ningún error quede oculto, y que las cifras finales sean verificables.
 Estas tablas son los ladrillos con los que se construirán los cuatro
 índices compuestos de las próximas fases (Severidad, Recurrencia,
 Persistencia, Magnitud ENSO) y, finalmente, el Índice de Cronicidad de
-Inundaciones por El Niño (EFCI). Sin este paso, esos índices no tendrían
+Inundaciones por El Niño (HCI). Sin este paso, esos índices no tendrían
 ninguna cifra real sobre la cual normalizar y ponderar.
 
 ## ¿Qué falta?

@@ -13,11 +13,11 @@ la base histórica cruda de eventos de desastre del SNGRE/ECU911
 enriquecerla con el índice ENSO mensual completo (ICEN/ONI) para el periodo
 2015–2025. Esta tabla es el insumo único para todas las fases posteriores
 (2–10): sin una base de eventos confiable y bien documentada, ningún índice
-derivado (Recurrencia, Severidad, Persistencia, EFCI) es defendible.
+derivado (Recurrencia, Severidad, Persistencia, HCI) es defendible.
 
 Esta fase **no** calcula índices, umbrales ni criterios de cohorte ENSO —
 esa responsabilidad se reserva a la Fase 3 (análisis histórico) y Fase 8
-(EFCI), para mantener una separación clara de responsabilidades entre fases
+(HCI), para mantener una separación clara de responsabilidades entre fases
 (principio de arquitectura modular, ver diseño Fase 0 §5).
 
 ## 2. Fundamento científico y de gestión de riesgo
@@ -51,7 +51,7 @@ modelos físicos, en su primera fase.
 
 ### 4.1 Alcance de peligro ampliado (decisión 2026-08-05)
 
-El alcance de EFCI v1 no se limita a `EVENTO == "Inundación"`. Por
+El alcance de HCI v1 no se limita a `EVENTO == "Inundación"`. Por
 instrucción explícita de Jerson ("debe incluir floods (riverine, flash),
 landslide, scour, y lo detectable temporalmente con las imágenes o procesos
 que vamos a hacer"), se incluyen cuatro tipos de evento:
@@ -74,7 +74,7 @@ InSAR para deslizamiento) sin rediseñar la tabla.
 
 **Limitación:** mezclar hazards con dinámicas físicas distintas (inundación
 vs. deslizamiento) en un mismo índice de cronicidad requiere que la Fase 3+
-mantenga `hazard_type` como variable de segmentación explícita — el EFCI no
+mantenga `hazard_type` como variable de segmentación explícita — el HCI no
 debe promediar across hazards sin decisión explícita al respecto (pendiente
 de discutir en Fase 3).
 
@@ -159,9 +159,9 @@ aportar una señal de calidad adicional útil en fases futuras.
 
 ### 4.6 Corrección de dato puntual: evento ID 51387 (2026-08-06)
 
-**Origen del hallazgo:** no surgió en esta fase, sino en la Fase 8 (EFCI
+**Origen del hallazgo:** no surgió en esta fase, sino en la Fase 8 (HCI
 compuesto), cuya prueba de sensibilidad de outliers de Severidad (§5.3 de
-`08_efci_composite.md`) identificó que un solo evento dominaba
+`08_hci_composite.md`) identificó que un solo evento dominaba
 desproporcionadamente el pilar Ganadería del Índice de Severidad (Fase 4
 §6): evento ID 51387, Baños de Agua Santa (Tungurahua), aluvión en Río
 Negro, 2021-09-05, columna `ANIMALES MUERTOS` = 500,000.
@@ -261,7 +261,7 @@ CSV (inspección manual). Ubicación: `data/processed/`.
 
 ## 10. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador (`EFCI_Ecuador_Fase0_Diseno_Conceptual.docx`), §7–8, §17, §19.4.
+- Fase 0 — Diseño Conceptual HCI Ecuador (`HCI_Ecuador_Fase0_Diseno_Conceptual.docx`), §7–8, §17, §19.4.
 - Notas Metodológicas — hoja `Notas Metodológicas`, workbook `Indices ENSO (1).xlsx`.
 - Pipelines de Acción Anticipatoria de FAO Etiopía/Somalia/Kenya (patrón de
   ingestión tabular impacto+clima, ver memoria de proyecto).

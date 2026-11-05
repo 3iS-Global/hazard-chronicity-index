@@ -9,7 +9,7 @@ Hasta ahora, el análisis de agrupamientos geográficos (Fase 9) mezclaba los 4 
 
 ## ¿Qué se hizo?
 
-Se repitió exactamente el mismo método ya validado en agosto (contigüidad geográfica entre cantones vecinos, detección de puntos calientes/fríos, mapa de densidad, agregación en hexágonos), pero usando **solo** los eventos y el índice EFCI calculados específicamente para inundación, no la mezcla de los 4 tipos.
+Se repitió exactamente el mismo método ya validado en agosto (contigüidad geográfica entre cantones vecinos, detección de puntos calientes/fríos, mapa de densidad, agregación en hexágonos), pero usando **solo** los eventos y el índice HCI calculados específicamente para inundación, no la mezcla de los 4 tipos.
 
 Una decisión que se confirmó contigo antes de programar: 7 de los 221 cantones nunca tuvieron un evento de inundación registrado. Se decidió asignarles cronicidad de inundación = 0 (en vez de excluirlos del mapa) porque es la lectura correcta: esos cantones genuinamente no tienen historial de inundación, no es un dato que falte.
 
@@ -19,7 +19,7 @@ Una decisión que se confirmó contigo antes de programar: 7 de los 221 cantones
 
 El ranking de cantones por cronicidad de inundación específicamente también cambia: **Chone (Manabí) pasa a ser el cantón con mayor cronicidad de inundación del país**, seguido de Quito, Guayaquil, Babahoyo y Santo Domingo — un ranking centrado en la costa y las cuencas bajas, muy distinto del ranking combinado (donde Quito lideraba).
 
-Un hallazgo con matiz: aunque Quito tiene un EFCI de inundación individualmente alto (2º lugar nacional), **no aparece como un "punto caliente" en el análisis de agrupamiento** — es decir, Quito es alto por sí mismo, pero sus vecinos no forman el mismo patrón consistente que sí se ve en la franja costera. Es información real sobre cómo se distribuye el riesgo, no un error.
+Un hallazgo con matiz: aunque Quito tiene un HCI de inundación individualmente alto (2º lugar nacional), **no aparece como un "punto caliente" en el análisis de agrupamiento** — es decir, Quito es alto por sí mismo, pero sus vecinos no forman el mismo patrón consistente que sí se ve en la franja costera. Es información real sobre cómo se distribuye el riesgo, no un error.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
@@ -28,4 +28,4 @@ Separar el análisis por tipo de amenaza responde directamente a lo que Jerson i
 ## ¿Qué falta?
 
 - Tu revisión de este primer resultado (inundación) antes de replicar el mismo trabajo a deslizamiento, socavamiento y aluvión.
-- Los mapas del índice EFCI y de puntos calientes/fríos específicos de inundación ya están listos — ver `09b_spatial_analysis_flood.md` (versión técnica) y el atlas `Atlas_EFCI_Ecuador_Flood.pdf`.
+- Los mapas del índice HCI y de puntos calientes/fríos específicos de inundación ya están listos — ver `09b_spatial_analysis_flood.md` (versión técnica) y el atlas `Atlas_HCI_Ecuador_Flood.pdf`.

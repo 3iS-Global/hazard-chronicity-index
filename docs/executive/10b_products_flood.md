@@ -15,7 +15,7 @@ Se documenta este ajuste explícitamente porque el mismo error se repetiría si 
 
 ## ¿Qué se entrega?
 
-Los mismos 8 mapas de siempre (frecuencia de inundaciones, severidad, frecuencia en meses El Niño, población afectada, pérdidas agrícolas, pérdidas de vivienda, cronicidad EFCI, y puntos calientes/fríos), ahora específicos de inundación, más un atlas PDF de 9 páginas (`Atlas_EFCI_Ecuador_Flood.pdf`).
+Los mismos 8 mapas de siempre (frecuencia de inundaciones, severidad, frecuencia en meses El Niño, población afectada, pérdidas agrícolas, pérdidas de vivienda, cronicidad HCI, y puntos calientes/fríos), ahora específicos de inundación, más un atlas PDF de 9 páginas (`Atlas_HCI_Ecuador_Flood.pdf`).
 
 **El cantón con mayor cronicidad de inundación del país es Chone (Manabí)**, seguido de Quito, Guayaquil, Babahoyo y Santo Domingo — un ranking centrado en la costa y las cuencas bajas, distinto del ranking combinado que ya conocías (donde Quito lideraba por una mezcla de deslizamientos y otros factores).
 

@@ -7,7 +7,7 @@
 
 ## 1. Objetivo de la fase
 
-Construir el cuarto y último insumo del EFCI compuesto (Fase 0 §9):
+Construir el cuarto y último insumo del HCI compuesto (Fase 0 §9):
 traducir las categorías ICEN (Débil/Moderado/Fuerte/Extraordinario) en
 valores normalizados 0-1, específicos por cantón y provincia, usando ICEN
 como índice ancla (confirmado en Fase 5 §4.2).
@@ -18,7 +18,7 @@ como índice ancla (confirmado en Fase 5 §4.2).
 
 ICEN produce un solo valor por mes para todo Ecuador — no varía por
 cantón. Severidad, Recurrencia y Persistencia (Fases 4-6) sí varían por
-cantón. Para que los cuatro sean combinables en el EFCI (Fase 8), había que
+cantón. Para que los cuatro sean combinables en el HCI (Fase 8), había que
 decidir una regla de agregación que convierta la magnitud ENSO nacional en
 un valor específico por unidad administrativa.
 
@@ -51,7 +51,7 @@ decidir:
 
 **Decisión final:** calcular **ambas** — `enso_magnitude_max` y
 `enso_magnitude_mean` — como columnas separadas, sin descartar ninguna
-todavía. La elección de cuál usar (o si combinarlas) en el EFCI compuesto
+todavía. La elección de cuál usar (o si combinarlas) en el HCI compuesto
 queda para el análisis de sensibilidad de la Fase 8, junto con los demás
 parámetros ya señalados en fases anteriores. Se prefirió el promedio sobre
 las variantes con ICEN continuo porque Fase 0 pide explícitamente traducir
@@ -152,7 +152,7 @@ Recurrencia (Fase 5) — son cantones con relativamente pocos eventos
 totales, pero cuyos eventos, en promedio, coincidieron con meses de El
 Niño más intenso que el promedio nacional.
 
-### 6.3 Consecuencia para el EFCI compuesto (Fase 8)
+### 6.3 Consecuencia para el HCI compuesto (Fase 8)
 
 Con `enso_magnitude_max`, el término de Magnitud ENSO (peso 0.15 en la
 fórmula de Fase 0 §9) contribuiría casi el mismo valor constante (0.15 ×
@@ -172,7 +172,7 @@ sensibilidad de la Fase 8.
   Se mantiene exportado (no se eliminó) porque sigue siendo la respuesta
   correcta a una pregunta operacionalmente válida ("¿ha enfrentado este
   cantón el El Niño más fuerte disponible?"), aunque no sirva bien como
-  insumo discriminante del EFCI compuesto.
+  insumo discriminante del HCI compuesto.
 - `enso_magnitude_mean` no se ha contrastado todavía contra una validación
   externa (p. ej. si los cantones con promedio alto realmente coinciden con
   percepción de expertos DRM/COE de mayor vulnerabilidad a El Niño) — es
@@ -201,7 +201,7 @@ sensibilidad de la Fase 8.
   se identificó, se investigó con 3 alternativas probadas empíricamente
   (no solo en teoría) y se resolvió con una segunda columna, todo dentro de
   esta misma fase — evita que un defecto de diseño se descubra recién al
-  ensamblar el EFCI compuesto, cuando sería más costoso de diagnosticar.
+  ensamblar el HCI compuesto, cuando sería más costoso de diagnosticar.
 - Calcular ambas agregaciones sin forzar una decisión prematura mantiene la
   Fase 8 libre de reabrir esta fase si el análisis de sensibilidad prefiere
   una, la otra, o una combinación de las dos.
@@ -209,7 +209,7 @@ sensibilidad de la Fase 8.
 ## 10. Posibles mejoras futuras
 
 - Decidir en la Fase 8, con el análisis de sensibilidad completo de los 4
-  índices, si el EFCI usa `enso_magnitude_max`, `enso_magnitude_mean`, o
+  índices, si el HCI usa `enso_magnitude_max`, `enso_magnitude_mean`, o
   una combinación (p. ej. promedio de ambas, o `mean` con `max` como
   desempate).
 - Evaluar si el peso de 0.15 asignado a Magnitud ENSO en la fórmula
@@ -223,7 +223,7 @@ sensibilidad de la Fase 8.
 
 ## 11. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (Magnitud ENSO).
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (Magnitud ENSO).
 - `docs/methodology/05_recurrence_index.md` §4.2-4.3 (ICEN como índice
   ancla, definición de alcance El Niño) y §12 (criterio ampliado).
 - Notas Metodológicas (workbook maestro) — categorías y umbrales oficiales
@@ -268,6 +268,6 @@ escalas de categorías a un valor ordinal común.
   fallar la ejecución con el nuevo criterio, que es el comportamiento
   correcto esperado, no un error a silenciar.
 
-Fase 8 (EFCI compuesto) se reejecutó sin cambios de código, heredando este
+Fase 8 (HCI compuesto) se reejecutó sin cambios de código, heredando este
 nuevo insumo — validación de cobertura y rango [0,1] confirmada para 221
 cantones y 24 provincias.

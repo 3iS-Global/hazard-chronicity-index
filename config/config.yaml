@@ -1,5 +1,5 @@
 # =============================================================================
-# EFCI Ecuador — Configuración general del proyecto
+# HCI Ecuador — Configuración general del proyecto
 # Fase 1: Ingesta y armonización de la base histórica de eventos
 # -----------------------------------------------------------------------------
 # Toda ruta, umbral o parámetro que pueda variar entre ejecuciones o entre
@@ -8,7 +8,7 @@
 # =============================================================================
 
 project:
-  name: "EFCI Ecuador"
+  name: "HCI Ecuador"
   phase: "Fase 15 - Asociacion estadistica ENSO-amenaza (NB ajustado por estacionalidad)"
   version: "0.15.0"
   crs: "EPSG:4326"  # WGS84 — CRS de trabajo por defecto para todas las capas
@@ -40,7 +40,7 @@ known_data_corrections:
       animales muertos superaría varias veces esa pérdida total estimada,
       para una comunidad rural de unas pocas decenas de familias. Se
       corrige a 0, consistente con ANIMALES AFECTADOS=0 en la misma fila.
-      Ver docs/methodology/01_data_ingestion.md y 08_efci_composite.md §5.3.
+      Ver docs/methodology/01_data_ingestion.md y 08_hci_composite.md §5.3.
     decided_by: "Jerson Achicanoy"
     decided_date: "2026-08-06"
 
@@ -123,7 +123,7 @@ pii:
 
 logging:
   level: "INFO"
-  log_filename: "efci_pipeline.log"
+  log_filename: "hci_pipeline.log"
 
 # -----------------------------------------------------------------------------
 # Fase 2 — Límites administrativos.
@@ -143,7 +143,7 @@ logging:
 #
 # ADM4 (656 MB, nivel sub-parroquial) se descargó pero NO se usa en esta fase:
 # no forma parte del esquema Admin_Boundary del diseño (provincia/cantón/
-# parroquia opcional) y su resolución excede lo necesario para EFCI a nivel
+# parroquia opcional) y su resolución excede lo necesario para HCI a nivel
 # cantonal. Queda documentado como capa futura disponible.
 admin_boundaries:
   source: "HDX cod-ab-ecu (INEC), descarga manual 2026-08-05"
@@ -228,15 +228,15 @@ persistence_index:
 # (Fase 6).
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
-# Fase 8 — EFCI compuesto.
+# Fase 8 — HCI compuesto.
 # Fórmula Fase 0 §9. Magnitud ENSO: se usa 'mean' (Fase 7, mejor poder de
 # discriminación: 200/221 valores distintos vs. 4/221 con 'max') como
-# insumo del EFCI oficial; 'max' se mantiene como variante de sensibilidad,
+# insumo del HCI oficial; 'max' se mantiene como variante de sensibilidad,
 # no se descarta. Clasificación: quiebres naturales (Jenks), confirmado por
 # Jerson (2026-08-05, AskUserQuestion) sobre cuantiles, dado que la
 # distribución es sesgada (pocos cantones muy extremos). Ver
-# docs/methodology/08_efci_composite.md.
-efci_composite:
+# docs/methodology/08_hci_composite.md.
+hci_composite:
   weights:
     recurrencia: 0.35
     severidad: 0.30
@@ -262,7 +262,7 @@ efci_composite:
   # winsorizar ahí no "recorta un outlier", literalmente aplasta casi toda
   # la señal a 0, generando un artefacto de empate masivo (117/221 cantones
   # empatados exactamente en 0.75), no una medición real de sensibilidad a
-  # outliers. Se usa 0.99 en su lugar — ver docs/methodology/08_efci_composite.md §4.3.
+  # outliers. Se usa 0.99 en su lugar — ver docs/methodology/08_hci_composite.md §4.3.
   severity_winsorize_percentile: 0.99
 
 enso_magnitude_index:
@@ -311,8 +311,8 @@ enso_criterio_ampliado:
 # -----------------------------------------------------------------------------
 # Fase 9 — Análisis espacial (Fase 0 §8).
 # Decisiones confirmadas por Jerson (2026-08-06, AskUserQuestion):
-# - Variables: EFCI + los 4 sub-índices (5 capas) para Gi*/Local Moran's I,
-#   no solo el EFCI compuesto — permite ver si un hotspot de EFCI está
+# - Variables: HCI + los 4 sub-índices (5 capas) para Gi*/Local Moran's I,
+#   no solo el HCI compuesto — permite ver si un hotspot de HCI está
 #   dominado por un componente específico.
 # - Pesos espaciales: Jerson delegó la elección técnica ("el mejor para
 #   este tipo de ejercicios") — se usa contigüidad Queen de orden 1 (la
@@ -330,7 +330,7 @@ enso_criterio_ampliado:
 # - Hexágonos: ~10 km de lado → H3 resolución 5 (borde promedio 9.85 km,
 #   la resolución H3 estándar más cercana al valor pedido).
 spatial_analysis:
-  variables: ["efci", "severity_index", "recurrence_index", "persistence_index", "enso_magnitude_mean"]
+  variables: ["hci", "severity_index", "recurrence_index", "persistence_index", "enso_magnitude_mean"]
   weights:
     method: "queen_knn_fallback"
     knn_fallback_k: 1

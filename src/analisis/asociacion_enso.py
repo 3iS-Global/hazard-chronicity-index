@@ -879,7 +879,7 @@ def classify_signal(
 
 
 def build_signal_table(
-    efci: pd.DataFrame, irr: pd.DataFrame, cfg: dict[str, Any]
+    hci: pd.DataFrame, irr: pd.DataFrame, cfg: dict[str, Any]
 ) -> pd.DataFrame:
     """Asigna a cada cantón × amenaza la etiqueta de señal ENSO de su región.
 
@@ -888,7 +888,7 @@ def build_signal_table(
     si no, queda "No evaluado" (pocos eventos). Galápagos queda "No evaluado".
 
     Args:
-        efci: ``efci_composite_canton`` (``canton_code``, ``province_code``,
+        hci: ``hci_composite_canton`` (``canton_code``, ``province_code``,
             ``hazard_type``).
         irr: Tabla ``irr`` de :func:`run_analysis` (con ``p_BH``).
         cfg: Configuración de la fase.
@@ -904,7 +904,7 @@ def build_signal_table(
     si no, queda "No evaluado" (pocos eventos). Galápagos queda "No evaluado".
 
     Args:
-        efci: ``efci_composite_canton`` (``canton_code``, ``province_code``,
+        hci: ``hci_composite_canton`` (``canton_code``, ``province_code``,
             ``hazard_type``).
         irr: Tabla ``irr`` de :func:`run_analysis` (con ``p_BH``).
         cfg: Configuración de la etapa.
@@ -915,7 +915,7 @@ def build_signal_table(
     mapa = {int(p): r for r, provs in cfg["regiones"].items() for p in provs}
     prim = irr[irr["modelo"] == "M1_primario_ICEN_binario"].set_index("estrato")
     filas = []
-    for _, fila in efci[
+    for _, fila in hci[
         ["canton_code", "canton_name_official", "province_code", "hazard_type"]
     ].iterrows():
         region = mapa.get(int(fila["province_code"]))

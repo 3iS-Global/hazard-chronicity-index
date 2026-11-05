@@ -1,6 +1,6 @@
 # 02 — Ubicación de los eventos en el mapa de Ecuador (resumen ejecutivo)
 
-**Fase 2 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 2 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -67,7 +67,7 @@ Con esta base, cada evento de inundación, deslizamiento, aluvión o
 socavamiento ya se puede dibujar en un mapa real de Ecuador y agregarse por
 provincia o por cantón con confianza. Este es el paso que hace posible,
 literalmente, "ver" dónde se concentra la cronicidad — sin él, el índice
-EFCI sería solo una tabla de números sin territorio.
+HCI sería solo una tabla de números sin territorio.
 
 ## Pendientes cerrados (2026-08-05, misma tarde)
 

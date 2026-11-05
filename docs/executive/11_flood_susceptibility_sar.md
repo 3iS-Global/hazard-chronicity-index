@@ -1,6 +1,6 @@
 # 11 — Frecuencia de Inundación Detectada por Satélite (resumen ejecutivo)
 
-**Fase 11 (extensión) del proyecto EFCI Ecuador — completa el 6 de agosto de 2026**
+**Fase 11 (extensión) del proyecto HCI Ecuador — completa el 6 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -11,7 +11,7 @@ completamente distinta: imágenes de radar satelital (Sentinel-1), que
 pueden "ver" el agua en el terreno directamente, de día o de noche, con
 nubes o sin ellas. El resultado es un mapa de qué zonas se inundaron
 repetidamente según lo que el satélite observó — no según lo que alguien
-reportó — clasificado en 5 categorías igual que hicimos con el EFCI.
+reportó — clasificado en 5 categorías igual que hicimos con el HCI.
 
 ## ¿Qué se hizo?
 
@@ -157,7 +157,7 @@ para este análisis.
 
 ## Nota importante
 
-Este mapa mide algo distinto al EFCI, no lo reemplaza: el EFCI dice "aquí
+Este mapa mide algo distinto al HCI, no lo reemplaza: el HCI dice "aquí
 la gente reportó inundaciones repetidas"; este nuevo mapa dice "aquí el
 satélite observó agua repetidas veces, en los momentos puntuales que se
 pudo mirar". Comparar ambos y ver dónde coinciden (como la zona de

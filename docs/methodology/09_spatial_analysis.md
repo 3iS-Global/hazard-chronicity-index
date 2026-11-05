@@ -59,14 +59,14 @@ Moran's I sin ser necesariamente un coldspot Gi*, ver §6.3).
 Todas confirmadas por Jerson vía AskUserQuestion (2026-08-06) antes de
 programar — ver también `config.yaml` bloque `spatial_analysis`.
 
-### 4.1 Variables: EFCI + los 4 sub-índices, no solo el compuesto
+### 4.1 Variables: HCI + los 4 sub-índices, no solo el compuesto
 
-Gi* y Local Moran's I se calculan sobre 5 capas (`efci`,
+Gi* y Local Moran's I se calculan sobre 5 capas (`hci`,
 `severity_index`, `recurrence_index`, `persistence_index`,
-`enso_magnitude_mean`) en vez de solo el EFCI final. Decisión
-explícita de Jerson: permite diagnosticar si un hotspot de EFCI está
+`enso_magnitude_mean`) en vez de solo el HCI final. Decisión
+explícita de Jerson: permite diagnosticar si un hotspot de HCI está
 impulsado por un componente específico (§6.4) — información que un
-único análisis sobre el EFCI compuesto ocultaría.
+único análisis sobre el HCI compuesto ocultaría.
 
 ### 4.2 Pesos espaciales: Queen + respaldo KNN=1, delegado a criterio técnico
 
@@ -114,13 +114,13 @@ vacías.
 - 0 islas tras el respaldo KNN (verificado con `assert`).
 - Suma de eventos por hexágono = 21,743 (coincide exactamente con el
   total de eventos, sin pérdidas ni duplicados).
-- Verificación de sentido común: Quito (el cantón #1 en EFCI, Fase 8
+- Verificación de sentido común: Quito (el cantón #1 en HCI, Fase 8
   §7) aparece como hotspot 95% (Gi*) y cluster HH (Moran's I) en la
-  capa `efci` — consistente con lo esperado, no contradictorio.
+  capa `hci` — consistente con lo esperado, no contradictorio.
 
 ## 6. Resultados
 
-### 6.1 Getis-Ord Gi* — EFCI
+### 6.1 Getis-Ord Gi* — HCI
 
 De 221 cantones: **51 hotspots** (11 al 99%, 19 al 95%, 21 al 90%) y
 **13 coldspots** (3 al 99%, 4 al 95%, 6 al 90%); 157 sin significancia.
@@ -142,7 +142,7 @@ esperado) y un segundo cluster en Azuay (Cuenca 95%, Sevilla de Oro
 90%, Guachapala 90%) + Carchi (Montúfar 90%) + Morona Santiago (Morona
 90%, Santiago 90%).
 
-### 6.2 Local Moran's I — EFCI
+### 6.2 Local Moran's I — HCI
 
 21 clusters Alto-Alto (HH), 6 Bajo-Bajo (LL), 9 Bajo-Alto (LH), 1
 Alto-Bajo (HL) — 184 sin significancia al 95%.
@@ -156,13 +156,13 @@ en la Amazonía norte). Los clusters LL coinciden exactamente con el
 coldspot de Sucumbíos identificado en Gi* (§6.1), más Santa Cruz
 (Galápagos) — un resultado estructural genuino: dentro del subgrafo de
 3 cantones de Galápagos conectado por el respaldo KNN (§4.2), Santa
-Cruz tiene un EFCI relativamente bajo rodeado de vecinos igualmente
+Cruz tiene un HCI relativamente bajo rodeado de vecinos igualmente
 bajos, no un artefacto de la conexión KNN en sí.
 
 ### 6.3 Un caso HL, valioso como hallazgo diagnóstico
 
-Cuenca es el único cantón "Alto-Bajo (HL)": su propio EFCI es
-relativamente alto, pero está rodeado de vecinos de EFCI bajo — y por
+Cuenca es el único cantón "Alto-Bajo (HL)": su propio HCI es
+relativamente alto, pero está rodeado de vecinos de HCI bajo — y por
 eso mismo aparece como coldspot en Gi* (que promedia con los vecinos),
 no como hotspot. Esto no es una contradicción entre los dos métodos:
 es exactamente la información adicional que Local Moran's I aporta
@@ -170,19 +170,19 @@ sobre Gi* — Cuenca no es "poco crónico" en términos absolutos, es un
 cantón relativamente crónico en una región (Azuay) que, en conjunto, lo
 es poco.
 
-### 6.4 Comparación entre las 5 capas — ¿qué impulsa los hotspots de EFCI?
+### 6.4 Comparación entre las 5 capas — ¿qué impulsa los hotspots de HCI?
 
-De los 51 hotspots de EFCI (cualquier nivel de confianza), el
+De los 51 hotspots de HCI (cualquier nivel de confianza), el
 solapamiento con los hotspots de cada sub-índice:
 
-| Sub-índice | Hotspots propios | Solapan con hotspots de EFCI | % de los 51 hotspots de EFCI |
+| Sub-índice | Hotspots propios | Solapan con hotspots de HCI | % de los 51 hotspots de HCI |
 |---|---|---|---|
 | Recurrencia | 54 | 42 | 82% |
 | Persistencia | 63 | 34 | 67% |
 | Severidad | 48 | 28 | 55% |
 | Magnitud ENSO | 57 | 13 | 25% |
 
-**Hallazgo no obvio:** los hotspots de EFCI están dominados por
+**Hallazgo no obvio:** los hotspots de HCI están dominados por
 Recurrencia y Persistencia, no por Severidad ni Magnitud ENSO — pese a
 que Severidad tiene casi tanto peso en la fórmula (0.30) como
 Recurrencia (0.35). Interpretación: Recurrencia y Persistencia miden
@@ -284,7 +284,7 @@ por severidad).
 - La comparación entre las 5 capas (§6.4) es un hallazgo diagnóstico
   genuino, no anticipado en el diseño original (Fase 0 §8 no
   especificaba correr hotspots sobre los sub-índices) — surgió de la
-  decisión de Jerson de incluir los 4 sub-índices, no solo el EFCI.
+  decisión de Jerson de incluir los 4 sub-índices, no solo el HCI.
 
 ## 11. Posibles mejoras futuras
 
@@ -303,8 +303,8 @@ por severidad).
 
 ## 12. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §8 (análisis espacial).
-- `docs/methodology/08_efci_composite.md` §7 (ranking EFCI usado como
+- Fase 0 — Diseño Conceptual HCI Ecuador, §8 (análisis espacial).
+- `docs/methodology/08_hci_composite.md` §7 (ranking HCI usado como
   referencia de sentido común en §5 de este documento).
 - Getis, A. & Ord, J.K. (1992). "The Analysis of Spatial Association by
   Use of Distance Statistics." *Geographical Analysis*.

@@ -49,7 +49,7 @@ IND={ # key:(num, slug, title, unit)
 'poblacion':('04','poblacion_afectada','Población afectada','Máximo histórico, personas afectadas directa e indirectamente'),
 'agricultura':('05','perdidas_agricolas','Pérdidas agrícolas','Máximo histórico, hectáreas afectadas y destruidas'),
 'vivienda':('06','perdidas_vivienda','Pérdidas de vivienda','Máximo histórico, viviendas afectadas y destruidas'),
-'efci':('07','hci_cronicidad','Cronicidad (HCI)','Clases del Índice de Cronicidad de Amenazas'),
+'hci':('07','hci_cronicidad','Cronicidad (HCI)','Clases del Índice de Cronicidad de Amenazas'),
 'hotspots':('08','hotspots_gi_star','Hotspots de cronicidad (Getis-Ord Gi*)','Significancia estadística del clúster espacial'),
 'educacion':('09','educacion_afectada','Establecimientos educativos afectados','Máximo histórico, afectados y destruidos'),
 'salud':('10','salud_afectada','Centros de salud afectados','Máximo histórico, afectados y destruidos'),

@@ -17,7 +17,7 @@ Severidad = 0.30·Población + 0.25·Vivienda + 0.20·Agricultura
           + 0.15·Ganadería + 0.10·Infraestructura
 ```
 
-Esta fase **no** calcula el EFCI compuesto (eso es Fase 8, cuando se combine
+Esta fase **no** calcula el HCI compuesto (eso es Fase 8, cuando se combine
 con Recurrencia, Persistencia y Magnitud ENSO).
 
 ## 2. Decisiones metodológicas confirmadas antes de programar
@@ -82,7 +82,7 @@ El multiplicador `2.0` ("destruido" vs. "afectado") y `10.0`/`5.0`
 `config.yaml` (`severity_index.destroyed_weight_multiplier`,
 `death_weight_multiplier`, `injured_weight_multiplier`), no hardcodeados en
 el notebook — quedan disponibles para el análisis de sensibilidad que la
-Fase 0 (§9) ya pedía antes de fijar el EFCI compuesto.
+Fase 0 (§9) ya pedía antes de fijar el HCI compuesto.
 
 ### 4.2 Normalización independiente por vista (`hazard_type` y nivel administrativo)
 
@@ -99,12 +99,12 @@ mismo valor en un pilar (rango = 0), el puntaje normalizado se define como
 0 para todos — sin variación, no hay información de severidad relativa que
 aportar.
 
-### 4.3 Clasificación por cuantiles: provisional, no es la clasificación final del EFCI
+### 4.3 Clasificación por cuantiles: provisional, no es la clasificación final del HCI
 
 Se incluye una clasificación de 5 categorías (Muy Baja a Muy Alta) por
 cuantiles sobre `severity_index`, solo dentro de la vista `"TODOS"`, para
 interpretación inmediata. **No debe leerse como el resultado final del
-proyecto** — la clasificación oficial del EFCI compuesto (Fase 0 §7:
+proyecto** — la clasificación oficial del HCI compuesto (Fase 0 §7:
 cuantiles, quiebres naturales o percentiles, a decidir con análisis de
 sensibilidad) se define en la Fase 8, sobre el índice compuesto final, no
 sobre un componente individual.
@@ -150,7 +150,7 @@ usar min-max:
   misma fila traía `ANIMALES AFECTADOS = 0`, inconsistente con 500,000
   muertos). Corregido a 0 en el origen (Fase 1 §4.6) y toda la cadena
   Step1→Step8 re-ejecutada. Ver `docs/methodology/01_data_ingestion.md`
-  §4.6 y `08_efci_composite.md` §5.3 para el detalle completo de la
+  §4.6 y `08_hci_composite.md` §5.3 para el detalle completo de la
   verificación y la corrección.
 
 **Consecuencia visible en el ranking (post-corrección):** Chone (Manabí)
@@ -181,7 +181,7 @@ casos, con resultados distintos.
   (`destroyed`, `death`, `injured`) son los propuestos en el diseño
   original más las extensiones documentadas en §4.1, pendientes de la
   validación de sensibilidad que la Fase 0 (§9) ya exige antes de fijar el
-  EFCI compuesto.
+  HCI compuesto.
 - Sensibilidad a valores atípicos por min-max — ver §6, con dos casos reales
   ya identificados.
 - El puntaje de Infraestructura combina escuelas y salud en una sola cifra
@@ -225,7 +225,7 @@ casos, con resultados distintos.
 
 ## 11. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (fórmula de Severidad), §15
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (fórmula de Severidad), §15
   (riesgos metodológicos).
 - `docs/methodology/02_spatial_integration.md` §4.8 (metodología del modelo
   COE, precedente del uso de máximo histórico).

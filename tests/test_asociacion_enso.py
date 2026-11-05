@@ -151,7 +151,7 @@ def test_classify_signal_rules():
 
 
 def test_build_signal_table_regions_and_unevaluated():
-    efci = pd.DataFrame({
+    hci = pd.DataFrame({
         "canton_code": ["0901", "1701", "2001", "0901"],
         "canton_name_official": ["Guayaquil", "Quito", "San Cristobal", "Guayaquil"],
         "province_code": ["09", "17", "20", "09"],
@@ -163,7 +163,7 @@ def test_build_signal_table_regions_and_unevaluated():
         "significativo_BH": [True, False],
     })
     cfg = {"regiones": {"Costa": [9], "Sierra": [17]}, "senal_umbral_fuerte": 2.0, "senal_umbral_moderada": 1.2}
-    out = ae.build_signal_table(efci, irr, cfg).set_index(["canton_code", "hazard_type"])
+    out = ae.build_signal_table(hci, irr, cfg).set_index(["canton_code", "hazard_type"])
     assert out.loc[("0901", "TODOS"), "senal_enso"] == "Fuerte"
     assert out.loc[("1701", "TODOS"), "senal_enso"] == "No detectable"
     assert out.loc[("2001", "TODOS"), "senal_enso"] == "No evaluado"          # Galápagos

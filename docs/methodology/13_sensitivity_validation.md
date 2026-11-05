@@ -2,7 +2,7 @@
 
 **Fase:** 13 (nueva, no prevista en el diseño original de Fase 0 — surge de
 la Fase 0 §9, que exige análisis de sensibilidad, y de las limitaciones ya
-reconocidas en `08_efci_composite.md` §8/§11: "no se realizó una búsqueda
+reconocidas en `08_hci_composite.md` §8/§11: "no se realizó una búsqueda
 exhaustiva de todas las combinaciones posibles de pesos")
 **Notebook asociado:** `notebooks/Step13_Ecuador_Sensitivity_Validation.ipynb`
 (pendiente de implementar — este documento fija el diseño antes de escribir
@@ -16,35 +16,35 @@ Extender — no repetir — el análisis de sensibilidad ya hecho en Fase 8 §5,
 cerrando las brechas que ese análisis reconoce explícitamente como
 pendientes, y cubriendo una capa que nunca se probó: los 5 pesos internos
 del Índice de Severidad (Fase 4), que hasta ahora no habían sido sometidos
-a ninguna prueba de sensibilidad — solo se probaron los 4 pesos del EFCI
+a ninguna prueba de sensibilidad — solo se probaron los 4 pesos del HCI
 compuesto que combinan Severidad con Recurrencia/Persistencia/Magnitud.
 
 Preguntas que este documento busca responder con evidencia, no con
 supuestos:
 
-1. ¿Qué tan estable es el ranking/clasificación del EFCI frente al espacio
+1. ¿Qué tan estable es el ranking/clasificación del HCI frente al espacio
    *completo* de combinaciones de pesos posibles, no solo 3 escenarios
    puntuales elegidos a mano?
-2. ¿Cuál de los 4 pesos del EFCI compuesto realmente explica más varianza
+2. ¿Cuál de los 4 pesos del HCI compuesto realmente explica más varianza
    del resultado — no solo cuál mueve más el ranking en un escenario
    concreto?
 3. ¿Son defendibles los 5 pesos de Severidad (0.30/0.25/0.20/0.15/0.10)
    frente a alternativas formales (pesos iguales, derivados de datos, o
    elicitación estructurada de juicio experto)?
-4. ¿Qué tan robusto es el EFCI de un cantón dado frente al muestreo
+4. ¿Qué tan robusto es el HCI de un cantón dado frente al muestreo
    aleatorio de qué eventos históricos "le tocaron" — no solo frente a los
    2 outliers ya identificados, sino en general?
 
 ## 2. Por qué esta fase existe — lección del hallazgo en Fase 8 §13
 
-Al preparar esta fase se encontró que la prosa de `08_efci_composite.md`
+Al preparar esta fase se encontró que la prosa de `08_hci_composite.md`
 §5 describía resultados de sensibilidad de la corrida v1.1 (agosto 2026),
 nunca actualizados tras el re-ejecute completo v1.2 (17-ago-2026, tras
 ampliar el criterio ENSO en Fase 5/7) — el CSV de salida sí se
 regeneró, la interpretación en prosa no. La consecuencia concreta: el
 "hallazgo" publicado (que el escenario "Énfasis Severidad" era el más
 frágil en clasificación) se invirtió con los datos vigentes ("Equitativo"
-es ahora el más frágil). Se corrigió (ver `08_efci_composite.md` §13),
+es ahora el más frágil). Se corrigió (ver `08_hci_composite.md` §13),
 pero expone un riesgo estructural: **3 escenarios puntuales, evaluados a
 mano, no son una descripción estable del comportamiento del índice** —
 pueden cambiar de conclusión con cada actualización de un insumo aguas
@@ -94,7 +94,7 @@ desastres, no son un diseño ad hoc:
 
 ## 4. Metodología
 
-### 4.1 Monte Carlo + Sobol sobre los 4 pesos del EFCI compuesto
+### 4.1 Monte Carlo + Sobol sobre los 4 pesos del HCI compuesto
 
 - N=10,000 muestreos de pesos (Recurrencia/Severidad/Persistencia/Magnitud)
   vía distribución Dirichlet centrada en los pesos base (0.35/0.30/0.20/0.15),
@@ -103,11 +103,11 @@ desastres, no son un diseño ad hoc:
 - Segunda corrida con Dirichlet no informativo (α=1,1,1,1) — explora el
   simplex completo sin sesgo hacia los pesos actuales, para no dar por
   sentado que la vecindad del peso base es la única zona relevante.
-- Por cada muestreo: recalcular EFCI y clase Jenks (221 cantones, vista
-  `"TODOS"`), Spearman ρ contra el EFCI base, % de cambio de clase.
+- Por cada muestreo: recalcular HCI y clase Jenks (221 cantones, vista
+  `"TODOS"`), Spearman ρ contra el HCI base, % de cambio de clase.
 - Índices de Sobol (primer orden `S1` y efecto total `ST`) por peso, con
   `SALib` (librería estándar de Python para sensibilidad global) — cuánta
-  varianza del EFCI resultante explica cada peso individualmente (`S1`) y
+  varianza del HCI resultante explica cada peso individualmente (`S1`) y
   cuánta explica considerando sus interacciones con los otros 3 (`ST`).
 - Salida: distribución de Spearman ρ y % cambio de clase sobre las 10,000
   muestras (no solo 3 puntos), más los índices de Sobol por peso.
@@ -128,7 +128,7 @@ desastres, no son un diseño ad hoc:
   cantón, vista `"TODOS"`), tomar las cargas del primer componente
   (normalizadas a sumar 1) como esquema de peso alternativo.
 - **Pesos iguales:** 0.20 cada pilar, el prior no informativo de control.
-- Recalcular `severity_index` y el EFCI resultante con cada uno de los 3
+- Recalcular `severity_index` y el HCI resultante con cada uno de los 3
   esquemas alternativos, comparar contra el esquema base (Spearman ρ, %
   cambio de clase) — misma métrica que Fase 8 §5, para comparabilidad
   directa.
@@ -151,7 +151,7 @@ añade:
 ### 4.4 Bootstrap de incertidumbre
 
 - Remuestreo de eventos por cantón, con reemplazo, 1,000 iteraciones.
-- Recalcular `severity_index` y `efci` en cada iteración.
+- Recalcular `severity_index` y `hci` en cada iteración.
 - Reportar percentiles [p5, p50, p95] por cantón, además del punto
   estimado ya existente — banda de incertidumbre, no solo un número.
 - Cantones con pocos eventos históricos (la misma limitación de tamaño de
@@ -161,9 +161,9 @@ añade:
 
 ## 5. Esquema de salida planeado
 
-- `sensitivity_sobol_efci.csv` — índices S1/ST por peso (Recurrencia,
+- `sensitivity_sobol_hci.csv` — índices S1/ST por peso (Recurrencia,
   Severidad, Persistencia, Magnitud), ambas corridas Dirichlet.
-- `sensitivity_montecarlo_efci_canton.parquet` — distribución completa de
+- `sensitivity_montecarlo_hci_canton.parquet` — distribución completa de
   Spearman ρ y % cambio de clase sobre las 10,000 muestras (para graficar
   histogramas, no solo reportar un promedio).
 - `severity_weights_comparison.csv` — `severity_index` bajo AHP/PCA/pesos
@@ -171,8 +171,8 @@ añade:
   el CR del AHP.
 - `severity_robust_comparison_canton.csv` — `severity_index` con
   normalización mediana/IQR vs. min-max, a nivel pilar y agregado.
-- `bootstrap_ci_efci_canton.csv` (221 filas) — `efci_p5`, `efci_p50`,
-  `efci_p95` por cantón, vista `"TODOS"`.
+- `bootstrap_ci_hci_canton.csv` (221 filas) — `hci_p5`, `hci_p50`,
+  `hci_p95` por cantón, vista `"TODOS"`.
 
 ## 6. Riesgos y limitaciones — reconocidos antes de implementar
 
@@ -202,7 +202,7 @@ añade:
 
 ## 7. Supuestos
 
-- Se asume que la estructura aditiva del EFCI (suma ponderada de 4
+- Se asume que la estructura aditiva del HCI (suma ponderada de 4
   índices normalizados 0-1) es la correcta — esta fase prueba sensibilidad
   *dentro* de esa estructura, no cuestiona la estructura misma (ya
   señalado como supuesto no probado en Fase 8 §9).
@@ -222,10 +222,10 @@ añade:
   (Sobol, Morris, FAST).
 - `docs/methodology/04_severity_index.md` §6, §7, §11 (outliers, pesos sin
   fuente formal, mejoras futuras).
-- `docs/methodology/08_efci_composite.md` §5, §8, §11, §13 (sensibilidad
+- `docs/methodology/08_hci_composite.md` §5, §8, §11, §13 (sensibilidad
   existente, limitaciones reconocidas, corrección de la prosa desactualizada
   que motivó esta fase).
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §9 (pedido explícito de
+- Fase 0 — Diseño Conceptual HCI Ecuador, §9 (pedido explícito de
   validación de pesos por sensibilidad), §12 (validación externa).
 
 ## 9. Resultados reales (2026-09-04)
@@ -237,7 +237,7 @@ pesos que suman 1 por construcción. En su lugar se usó el estimador
 equifrecuentes), que funciona directamente sobre cualquier muestra ya
 generada sin asumir independencia — ver notebook §2.1 para el detalle.
 
-### 9.1 Monte Carlo + Sobol sobre los 4 pesos del EFCI (§4.1)
+### 9.1 Monte Carlo + Sobol sobre los 4 pesos del HCI (§4.1)
 
 | Corrida | Mediana % cambio de clase | p95 % cambio de clase |
 |---|---|---|
@@ -299,7 +299,7 @@ normalización específico.
 
 ### 9.4 Bootstrap de incertidumbre (§4.4)
 
-Ancho de banda IC90 del EFCI: mediana 0.0054, p95 0.0477 (escala 0-1).
+Ancho de banda IC90 del HCI: mediana 0.0054, p95 0.0477 (escala 0-1).
 **Hallazgo no intuitivo:** los cantones con bandas MÁS ANGOSTAS no son
 los que tienen más eventos históricos, sino cantones pequeños muy por
 debajo del techo nacional de normalización (p. ej. Déleg, 3 eventos,
@@ -323,10 +323,10 @@ considera convergido.
 
 1. Considerar si el hallazgo de Magnitud ENSO (§9.1) amerita revisar ese
    peso específico o su método de agregación en una futura iteración del
-   EFCI — no se cambia nada en esta fase, solo se documenta la evidencia.
+   HCI — no se cambia nada en esta fase, solo se documenta la evidencia.
 2. Validación externa contra EM-DAT/DesInventar/UNOSAT (Fase 0 §12, sigue
    pendiente).
 3. Extender el bootstrap (§4.4) a Recurrencia/Persistencia/Magnitud, no
    solo Severidad, si se requiere una banda de incertidumbre completa del
-   EFCI (requiere remuestrear la serie temporal ENSO, no solo eventos de
+   HCI (requiere remuestrear la serie temporal ENSO, no solo eventos de
    impacto).

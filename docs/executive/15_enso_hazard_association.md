@@ -1,6 +1,6 @@
 # 15 — ¿Realmente hay más eventos cuando llega El Niño? (resumen ejecutivo)
 
-**Fase 15 del proyecto EFCI Ecuador — completada el 6 de octubre de 2026**
+**Fase 15 del proyecto HCI Ecuador — completada el 6 de octubre de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO y contrapartes institucionales
 **Documento técnico:** `docs/methodology/15_enso_hazard_association.md`
 
@@ -103,4 +103,4 @@ equipo:
 
 * Aviso metodológico visible en el atlas y el dashboard.
 * Etiqueta de señal de El Niño para cada cantón (fuerte, moderada, débil, no detectable, inversa). Nota: se basa en la región de la provincia, por lo que algunos cantones de transición pueden quedar mal clasificados.
-* Infografía que explica el método en lenguaje sencillo: `outputs/figures/EFCI_Infografia_Metodologia.png`.
+* Infografía que explica el método en lenguaje sencillo: `outputs/figures/HCI_Infografia_Metodologia.png`.

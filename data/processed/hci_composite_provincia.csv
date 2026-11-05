@@ -1,4 +1,4 @@
-province_code,province_name_official,hazard_type,n_eventos,severity_index,recurrence_index,persistence_index,enso_magnitude_mean,enso_magnitude_max,efci,clase_efci
+province_code,province_name_official,hazard_type,n_eventos,severity_index,recurrence_index,persistence_index,enso_magnitude_mean,enso_magnitude_max,hci,clase_hci
 01,Azuay,debris_flow,17,0.009745396849682574,0.09259259259259259,0.4372953070175439,0.14705882352941177,0.75,0.14484891139523273,
 01,Azuay,flood,274,0.08892051637732255,0.5185185185185185,0.7006160288065844,0.21532846715328466,1.0,0.3805801122289878,
 01,Azuay,landslide,737,0.08668852858333066,0.8888888888888888,0.5338593116319444,0.23575305291723203,1.0,0.47925248995008396,

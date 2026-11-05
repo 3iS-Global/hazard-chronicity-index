@@ -16,7 +16,7 @@ INAMHI indica que no ocurriría)
 ## 1. Objetivo de la fase
 
 Poner a prueba, con un modelo estadístico adecuado, la premisa que justifica
-todo el diseño del EFCI (Fase 0, H1): *los eventos ocurren con mayor
+todo el diseño del HCI (Fase 0, H1): *los eventos ocurren con mayor
 frecuencia durante episodios El Niño.* Hasta esta fase la evidencia era
 (i) una razón cruda nacional de 1.96x (Fase 5 §4.4), (ii) conteos por
 categoría ENSO sin normalizar por el número de meses de cada categoría
@@ -196,21 +196,21 @@ definición costera del evento.
   estratos, entre ellos Nacional, Sierra, Oriente, deslizamiento,
   inundación y aluvión → justifica HAC y bootstrap por bloques.
 
-## 6. Implicaciones para el EFCI y decisiones abiertas
+## 6. Implicaciones para el HCI y decisiones abiertas
 
-Esta fase **no modifica** el EFCI; documenta evidencia que obliga a decisiones
+Esta fase **no modifica** el HCI; documenta evidencia que obliga a decisiones
 explícitas del equipo (flujo de trabajo del proyecto: discutir antes de
 cambiar la fórmula):
 
 1. **Interpretación del índice fuera de la Costa.** En Sierra y Oriente el
-   EFCI mide cronicidad de eventos hidrometeorológicos, pero la evidencia
+   HCI mide cronicidad de eventos hidrometeorológicos, pero la evidencia
    no respalda atribuirla a El Niño. El uso para activación anticipatoria
    ante un episodio El Niño es defendible en la Costa y para inundación y
    socavamiento; no lo es, con estos datos, para la Sierra ni el Oriente.
    Acción mínima: una **etiqueta de "señal ENSO regional"** (fuerte / débil /
    no detectable) por cantón en el dashboard y los perfiles.
-2. **Aluvión (EACI).** La asociación es inversa (IRR 0.46): hay menos
-   aluviones por mes durante El Niño. El EACI debe presentarse como
+2. **Aluvión (HCI).** La asociación es inversa (IRR 0.46): hay menos
+   aluviones por mes durante El Niño. El HCI debe presentarse como
    cronicidad del peligro, no como cronicidad *asociada a ENSO*.
 3. **Componente Magnitud ENSO (15 %).** Sin gradiente por magnitud a escala
    nacional y con ese componente ya identificado como el más influyente en
@@ -290,4 +290,4 @@ Tiempo de ejecución ≈ 1 minuto. Dependencias nuevas: `statsmodels>=0.14`,
 - **Limitación adicional (asignación regional):** la región (Costa/Sierra/Oriente) se asigna a nivel de provincia. Cantones de transición climática (p. ej. Puerto Quito, Pedro Vicente Maldonado, La Maná, La Troncal, Zapotillo) pueden quedar mal clasificados; la etiqueta de señal por cantón hereda este error.
 - **Etiquetas por cantón:** `data/processed/enso_senal_canton.{parquet,csv}` (función `classify_signal`, umbrales en `config.yaml`: ≥2.0 Fuerte, ≥1.2 Moderada, <1 Inversa, no significativo = No detectable).
 - **Aviso en el dashboard:** `src/exportacion/aviso_metodologico.py` inyecta de forma idempotente un aviso colapsable, con cifras leídas de los resultados, en los 4 HTML (atlas y dashboard).
-- **Infografía:** `outputs/figures/EFCI_Infografia_Metodologia.png`.
+- **Infografía:** `outputs/figures/HCI_Infografia_Metodologia.png`.

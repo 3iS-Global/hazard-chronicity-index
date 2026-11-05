@@ -1,7 +1,7 @@
-# 08 — EFCI Compuesto y Análisis de Sensibilidad
+# 08 — HCI Compuesto y Análisis de Sensibilidad
 
 **Fase:** 8 de 10 (ver Fase 0, §9, §7)
-**Notebook asociado:** `notebooks/Step8_Ecuador_EFCI_Composite.ipynb`
+**Notebook asociado:** `notebooks/Step8_Ecuador_HCI_Composite.ipynb`
 **Estado:** implementado y ejecutado — 2026-08-05 (v1.1: re-ejecutado tras corrección de dato en Fase 1 §4.6, 2026-08-06; v1.2: re-ejecutado tras ampliación del criterio ENSO en Fase 5/7, 2026-08-17 — ver nota al final de este documento)
 **Audiencia:** científicos, desarrolladores, especialistas DRM/FAO AA
 
@@ -9,10 +9,10 @@
 
 Combinar los cuatro índices ya construidos (Severidad — Fase 4,
 Recurrencia — Fase 5, Persistencia — Fase 6, Magnitud ENSO — Fase 7) en el
-Índice de Cronicidad de Inundaciones por El Niño (EFCI):
+Índice de Cronicidad de Inundaciones por El Niño (HCI):
 
 ```
-EFCI = 0.35·Recurrencia + 0.30·Severidad + 0.20·Persistencia + 0.15·Magnitud ENSO
+HCI = 0.35·Recurrencia + 0.30·Severidad + 0.20·Persistencia + 0.15·Magnitud ENSO
 ```
 
 y ejecutar el análisis de sensibilidad que la Fase 0 (§9) exige
@@ -35,14 +35,14 @@ exploratorio.
 - **Correlación de rangos de Spearman** (no Pearson) para comparar el
   ranking base contra cada variante de sensibilidad: lo que importa para
   priorización territorial es el *orden* relativo de los cantones, no la
-  magnitud exacta del EFCI.
+  magnitud exacta del HCI.
 - **Conteo de cambios de clase Jenks** como segunda métrica, complementaria
   a Spearman: una correlación alta puede convivir con muchos cambios de
   clase si los valores están muy cerca de un quiebre — se reporta ambas
   para no ocultar ese matiz (ver hallazgo en §6.2).
 - **Quiebres naturales (Jenks)**, no cuantiles, para la clasificación final
   — confirmado por Jerson vía AskUserQuestion, dado que la distribución del
-  EFCI es sesgada (ver §7): Jenks minimiza la varianza dentro de cada clase
+  HCI es sesgada (ver §7): Jenks minimiza la varianza dentro de cada clase
   y maximiza la varianza entre clases, en vez de forzar grupos de igual
   tamaño sin relación con la forma real de los datos.
 
@@ -65,7 +65,7 @@ ellas.
 
 Resuelve el pendiente de Fase 7 §6: se usa `enso_magnitude_mean` (200/221
 valores distintos, correlación baja con Severidad) como el insumo oficial
-del EFCI base, y `enso_magnitude_max` se conserva como variante de
+del HCI base, y `enso_magnitude_max` se conserva como variante de
 sensibilidad (§6.1) — no se descarta, queda disponible en la tabla final.
 
 ### 4.3 Clasificación final: Jenks, no cuantiles
@@ -113,7 +113,7 @@ comparación son idénticos), sino de que los insumos de Recurrencia y
 Magnitud ENSO cambiaron de forma ascendente en la actualización v1.2
 (denominador de Recurrencia 38→54 meses, techo de escala de Magnitud
 ahora alcanza 1.0) — un recordatorio de que las pruebas de sensibilidad
-deben re-ejecutarse, no solo el EFCI base, cada vez que cambia un insumo
+deben re-ejecutarse, no solo el HCI base, cada vez que cambia un insumo
 aguas arriba.
 
 ### 5.3 Robustez de Severidad a los outliers de Fase 4 §6
@@ -135,7 +135,7 @@ antes: preserva señal real en las 5 columnas, sin percentiles en cero).
 **131 de 221 cantones (59.3%) cambian de clase** — más de la mitad del
 país. Casos concretos (estos sí se mantienen idénticos a la versión
 anterior del documento: los valores de `severity_index`/`severity_index_robusto`
-no dependen del criterio ENSO que cambió en v1.2, solo el `efci`/`efci_sev_robusta`
+no dependen del criterio ENSO que cambió en v1.2, solo el `hci`/`hci_sev_robusta`
 que los combina con Recurrencia/Persistencia/Magnitud):
 
 | Cantón | Severidad original | Severidad robusta (p99) |
@@ -159,14 +159,14 @@ Severidad, incluso después de haber corregido el dato erróneo de Baños
 (§4.6 de Fase 1). Es decir: la fragilidad de esta prueba **no provenía
 únicamente** del error de captura de Baños — la winsorización sigue
 siendo, por sí sola, la decisión metodológica más consecuente de todo el
-EFCI, con o sin ese error, y sigue siendo la prueba más sensible de las
+HCI, con o sin ese error, y sigue siendo la prueba más sensible de las
 cinco tras la actualización v1.2. La corrección de Baños resolvió si su
 valor concreto era confiable (no lo era), pero no elimina la sensibilidad
 estructural del índice a valores extremos legítimos como el de Quito.
 
 ### 5.4 Resumen consolidado
 
-Exportado en `data/processed/efci_sensitivity_summary.csv` — las cinco
+Exportado en `data/processed/hci_sensitivity_summary.csv` — las cinco
 pruebas, con Spearman ρ y % de cambio de clase, en una sola tabla para
 referencia rápida. Es la fuente autoritativa (salida directa del
 notebook); si alguna vez este documento vuelve a divergir de ese CSV,
@@ -174,18 +174,18 @@ el CSV manda — ver nota de corrección al final de este documento.
 
 ## 6. Esquema de salida
 
-- `efci_composite_canton.{parquet,csv}` (835 filas): las columnas de los 4
-  índices insumo, `efci` (base), `clase_efci` (Jenks, solo vista `"TODOS"`),
-  más las 5 variantes de sensibilidad (`efci_mag_max`,
-  `efci_pesos_equitativo`, `efci_pesos_enfasis_severidad`,
-  `efci_pesos_enfasis_recurrencia`, `efci_sev_robusta`) y sus clases Jenks
+- `hci_composite_canton.{parquet,csv}` (835 filas): las columnas de los 4
+  índices insumo, `hci` (base), `clase_hci` (Jenks, solo vista `"TODOS"`),
+  más las 5 variantes de sensibilidad (`hci_mag_max`,
+  `hci_pesos_equitativo`, `hci_pesos_enfasis_severidad`,
+  `hci_pesos_enfasis_recurrencia`, `hci_sev_robusta`) y sus clases Jenks
   correspondientes.
-- `efci_composite_provincia.{parquet,csv}` (113 filas): mismo esquema,
-  nivel provincia (solo EFCI base + clase, sin las variantes de
+- `hci_composite_provincia.{parquet,csv}` (113 filas): mismo esquema,
+  nivel provincia (solo HCI base + clase, sin las variantes de
   sensibilidad — esas se probaron únicamente a nivel cantón).
-- `efci_sensitivity_summary.csv`: tabla resumen de las 4 pruebas.
+- `hci_sensitivity_summary.csv`: tabla resumen de las 4 pruebas.
 
-## 7. Resultados — ranking nacional (EFCI base, vista `"TODOS"`, post-corrección Baños 2026-08-06)
+## 7. Resultados — ranking nacional (HCI base, vista `"TODOS"`, post-corrección Baños 2026-08-06)
 
 **Distribución de clases (cantón, Jenks):** Muy Baja 25, Baja 59, Moderada
 85, Alta 37, Muy Alta 15 — de 221. Distribución no uniforme (a diferencia
@@ -198,7 +198,7 @@ min-max de esa categoría para todos los cantones, no solo para Baños.
 **Top 5 cantones:** Distrito Metropolitano de Quito (0.604), Ambato
 (0.514), Chone (0.463), Esmeraldas (0.416), Morona (0.404). Baños de Agua
 Santa —que antes de la corrección ocupaba el 4º lugar (0.437)— pasó al
-**8º lugar (0.396)**, cediendo su puesto a cantones cuyo EFCI no dependía
+**8º lugar (0.396)**, cediendo su puesto a cantones cuyo HCI no dependía
 del dato corregido.
 
 **Top 3 provincias:** Tungurahua (0.625), Manabí (0.573), Pichincha
@@ -206,7 +206,7 @@ del dato corregido.
 provincia el error de captura de Baños queda diluido dentro del agregado
 de Tungurahua y no altera el ranking.
 
-**Hallazgo de valor diagnóstico — el EFCI muestra perfiles muy distintos
+**Hallazgo de valor diagnóstico — el HCI muestra perfiles muy distintos
 entre cantones con puntaje similar:**
 - **Quito** llega al primer lugar impulsado por Persistencia (1.0, el
   máximo posible) y Recurrencia (0.79) — su Severidad (0.365) es apenas
@@ -219,13 +219,13 @@ entre cantones con puntaje similar:**
   la más alta de las tres) pero Recurrencia (0.605) y Persistencia (0.261)
   más moderadas.
 - **Baños de Agua Santa** (8º lugar tras la corrección) sigue en "Muy
-  Alta" cronicidad — su EFCI ya no depende de un valor de Severidad
+  Alta" cronicidad — su HCI ya no depende de un valor de Severidad
   inflado (0.026, prácticamente nula) sino de Recurrencia (0.763) y
   Persistencia (0.435) altas, un perfil ahora consistente con el resto de
   cantones de Tungurahua (Ambato, San Pedro de Pelileo) y sin depender de
   ningún dato cuestionado.
 
-Esto no es un defecto del EFCI — es precisamente el valor de un índice
+Esto no es un defecto del HCI — es precisamente el valor de un índice
 compuesto de 4 dimensiones: cantones que serían indistinguibles con un
 solo criterio (p. ej. solo conteo de eventos) resultan tener perfiles de
 riesgo operacionalmente distintos, información directamente útil para
@@ -234,13 +234,13 @@ territorio.
 
 ## 8. Limitaciones
 
-- El EFCI base usa `enso_magnitude_mean`, que no ha sido validado
+- El HCI base usa `enso_magnitude_mean`, que no ha sido validado
   externamente (Fase 7 §7) — es una mejora estadística demostrada, no una
   validación de que sea la interpretación operacionalmente correcta.
 - La sensibilidad a los outliers de Severidad (§5.3, ρ=0.8716, 59.3% de
   cambios de clase) sigue siendo la más alta de las cinco pruebas —
   incluso tras verificar y corregir el evento de Baños (Fase 1 §4.6), el
-  EFCI base sigue siendo sensible a valores extremos legítimos como el de
+  HCI base sigue siendo sensible a valores extremos legítimos como el de
   Quito. Esta es una propiedad estructural del método (min-max sobre una
   distribución con cola larga), no un problema de calidad de dato
   pendiente de resolver.
@@ -258,7 +258,7 @@ territorio.
   no caracterizan de forma estable el espacio completo; un método de
   sensibilidad global (Monte Carlo/Sobol) daría una caracterización menos
   dependiente de qué 3 escenarios se eligieron a mano — ver Fase 13.
-- No se validó el EFCI contra fuentes externas (UNOSAT, EM-DAT,
+- No se validó el HCI contra fuentes externas (UNOSAT, EM-DAT,
   DesInventar, Copernicus EMS — Fase 0 §12) — pendiente para una fase
   futura.
 - No se realizó una búsqueda exhaustiva de todas las combinaciones
@@ -290,7 +290,7 @@ territorio.
   percentil 95 = 0) — no llegó a la tabla final como un artefacto sin
   explicar.
 - La tabla de salida conserva **todas** las variantes de sensibilidad, no
-  solo el EFCI base — cualquier decisión futura de ajustar pesos o método
+  solo el HCI base — cualquier decisión futura de ajustar pesos o método
   puede compararse directamente contra lo ya calculado, sin re-ejecutar
   todo el pipeline.
 
@@ -303,7 +303,7 @@ territorio.
 - Considerar una estructura de interacción entre dimensiones si el
   análisis con expertos DRM/COE sugiere que la relación no es puramente
   aditiva.
-- Validación externa (Fase 0 §12) antes de considerar el EFCI apto para
+- Validación externa (Fase 0 §12) antes de considerar el HCI apto para
   uso operacional en decisiones de Acción Anticipatoria.
 - Barrido sistemático (grid search) de pesos, no solo 3 escenarios
   representativos, si se requiere una caracterización más completa de la
@@ -311,8 +311,8 @@ territorio.
 
 ## 12. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §7 (clasificación), §9 (fórmula
-  EFCI y pedido explícito de análisis de sensibilidad), §12 (validación
+- Fase 0 — Diseño Conceptual HCI Ecuador, §7 (clasificación), §9 (fórmula
+  HCI y pedido explícito de análisis de sensibilidad), §12 (validación
   externa), §19.3.
 - `docs/methodology/04_severity_index.md` §6 (outliers), `05_recurrence_index.md`
   §4.3 (evento ENSO), `06_persistence_index.md` §4.2 (pesos de
@@ -328,9 +328,9 @@ alcanza 1.0) — ver `05_recurrence_index.md` §12 y `07_enso_magnitude_index.md
 §12 para el detalle del cambio ascendente.
 
 Validación de cobertura y rango tras reejecutar: 221 cantones, 24
-provincias, EFCI en [0,1] — OK, sin regresiones.
+provincias, HCI en [0,1] — OK, sin regresiones.
 
-Ranking recalculado (`efci`, vista `TODOS`, pesos base): **Distrito
+Ranking recalculado (`hci`, vista `TODOS`, pesos base): **Distrito
 Metropolitano de Quito** (0.637, "Muy Alta"), **Ambato** (0.537),
 **Chone** (0.469), Esmeraldas (0.441), Morona (0.415), Loja (0.411), Baños
 de Agua Santa (0.404), Santo Domingo (0.401) — el mismo orden de los tres
@@ -341,8 +341,8 @@ que el orden del top 3 se mantiene estable frente al cambio de criterio
 ENSO. Lo que sí cambió de forma verificable es el insumo de Recurrencia
 (Fase 5 §12): Quito no aparecía en el top 5 de Recurrencia por sí sola bajo
 el criterio ICEN-solo, y ahora sí — consistente con que Quito ya llegaba a
-la cima del EFCI compuesto principalmente por Persistencia y Severidad, no
-por Recurrencia (ver hallazgo ya documentado en `docs/executive/08_efci_composite.md`).
+la cima del HCI compuesto principalmente por Persistencia y Severidad, no
+por Recurrencia (ver hallazgo ya documentado en `docs/executive/08_hci_composite.md`).
 No se reabrió el análisis de sensibilidad de pesos (§7-§9) — las variantes
 de pesos ya evaluadas siguen siendo válidas como estructura, solo cambian
 los valores de entrada.
@@ -352,18 +352,18 @@ los valores de entrada.
 **Hallazgo:** al preparar la Fase 13 (validación de sensibilidad extendida,
 ver `docs/methodology/13_sensitivity_validation.md`), se detectó que el
 notebook completo sí se re-ejecutó de punta a punta el 2026-08-17 (mismo
-timestamp en `efci_sensitivity_summary.csv` y en este documento), pero la
+timestamp en `hci_sensitivity_summary.csv` y en este documento), pero la
 nota de la sección anterior ("no se reabrió el análisis de sensibilidad de
 pesos") se interpretó — incorrectamente — como que tampoco había que
 actualizar la prosa de §5.1-§5.3, que seguía describiendo los números de la
 corrida v1.1 (pre-ampliación del criterio ENSO en Fase 5/7). Los números
 sí cambiaron, porque Recurrencia, Persistencia y Magnitud ENSO son insumos
-directos del EFCI que compara cada prueba de sensibilidad.
+directos del HCI que compara cada prueba de sensibilidad.
 
 **Verificación:** los valores corregidos en §5.1-§5.3 se recalcularon de
-forma independiente directamente desde `efci_composite_canton.csv` (columnas
-`efci_mag_max`, `efci_pesos_*`, `efci_sev_robusta` y sus clases Jenks
-correspondientes) — coinciden exactamente con `efci_sensitivity_summary.csv`
+forma independiente directamente desde `hci_composite_canton.csv` (columnas
+`hci_mag_max`, `hci_pesos_*`, `hci_sev_robusta` y sus clases Jenks
+correspondientes) — coinciden exactamente con `hci_sensitivity_summary.csv`
 y con la salida guardada del propio notebook (celda de `casos[[...]]`,
 2026-08-17). Los valores de `severity_index`/`severity_index_robusto` en la
 tabla de §5.3 (Chone, Quito, Baños) no cambiaron, porque Severidad no
@@ -383,6 +383,6 @@ escenario.
 notebook se re-ejecuta completo por un cambio de insumo aguas arriba, toda
 prosa que cite un número debe tratarse como potencialmente obsoleta hasta
 verificarse contra la salida más reciente — no solo el resultado principal
-de la fase (EFCI base, §12 anterior), también los resultados secundarios
+de la fase (HCI base, §12 anterior), también los resultados secundarios
 (pruebas de sensibilidad, tablas de casos). Este es exactamente el tipo de
 riesgo que la Fase 13 busca reducir de forma sistemática.

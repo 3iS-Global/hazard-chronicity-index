@@ -1,6 +1,6 @@
 # 04 — Índice de Severidad (resumen ejecutivo)
 
-**Fase 4 de 10 del proyecto EFCI Ecuador — completada el 5 de agosto de 2026**
+**Fase 4 de 10 del proyecto HCI Ecuador — completada el 5 de agosto de 2026**
 **Audiencia:** directores, tomadores de decisión, personal de FAO, especialistas no técnicos
 
 ## ¿Qué problema resuelve esta etapa?
@@ -75,7 +75,7 @@ solo se cambió lo que la evidencia respaldaba.
 
 ## ¿Cómo contribuye esto al objetivo final?
 
-El Índice de Severidad es uno de los cuatro ingredientes del EFCI final
+El Índice de Severidad es uno de los cuatro ingredientes del HCI final
 (los otros son Recurrencia, Persistencia y Magnitud de El Niño, que vienen
 en las próximas fases). Con esta pieza lista, el proyecto ya tiene una
 respuesta cuantitativa y comparable a "¿qué tan grave ha sido el impacto

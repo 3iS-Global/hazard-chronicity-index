@@ -242,7 +242,7 @@ discrepancias de método.
 **Contraste con nuestro alcance de peligro (hallazgo nuevo, no estaba en la
 v1 de este documento):** en 93 de 134 cantones (69%), el evento que produjo
 el `Máximo Impacto Histórico` del modelo COE SÍ pertenece a nuestro alcance
-(inundación/aluvión/deslizamiento/socavamiento) — el modelo COE y el EFCI
+(inundación/aluvión/deslizamiento/socavamiento) — el modelo COE y el HCI
 miden esencialmente lo mismo en esos casos. En los 41 restantes (31%), el
 máximo proviene de un tipo de evento **fuera** de nuestro alcance que cayó
 dentro de la misma ventana de 38 meses "ENSO": Sismo (19 cantones —
@@ -253,7 +253,7 @@ Cotopaxi/Tungurahua, no El Niño), vendaval (5), déficit hídrico (4), y
 otros. **Implicación:** el modelo COE existente, al restringir por mes
 pero no por tipo de peligro, puede sobreestimar el riesgo específico de El
 Niño en cantones donde el evento históricamente más severo fue en realidad
-un sismo o una erupción que coincidió por calendario, no por causa. El EFCI,
+un sismo o una erupción que coincidió por calendario, no por causa. El HCI,
 al filtrar por tipo de peligro desde la Fase 1, no hereda ese problema. Ver
 `outputs/tables/cierre_pendientes_fase2.xlsx` (hoja `Comparacion_COE`) para
 el detalle cantón por cantón.
@@ -308,7 +308,7 @@ casos. Ver `outputs/tables/cierre_pendientes_fase2.xlsx` (hoja `Revisar_43`).
 
 ## 10. Referencias
 
-- Fase 0 — Diseño Conceptual EFCI Ecuador, §7.2, §19.4.
+- Fase 0 — Diseño Conceptual HCI Ecuador, §7.2, §19.4.
 - HDX — "Ecuador - Subnational Administrative Boundaries" (cod-ab-ecu),
   INEC, actualizado 2024-12-18.
 - `docs/methodology/01_data_ingestion.md` (Fase 1, insumo de esta fase).
